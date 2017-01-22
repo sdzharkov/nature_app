@@ -35,7 +35,11 @@
         "esri/graphic",
         "esri/config",
         "dojo/on",
+        "esri/Color",
+        "esri/renderers/ClassBreaksRenderer",
+        "esri/symbols/SimpleFillSymbol",
         "dojo/_base/array",
+        "esri/symbols/SimpleMarkerSymbol",
         "dojo/domReady!"
       ], function(
         Map,
@@ -46,7 +50,11 @@
         Graphic,
         xx,
         on,
-        array
+        ClassBreaksRenderer,
+        Color,
+        SimpleFillSymbol,
+        array,
+        SimpleMarkerSymbol
       ) {
         esriConfig.defaults.io.proxyUrl = "/proxy/";
         xx.defaults.io.corsEnabledServers.push('http://127.0.0.1:5000/')
@@ -105,7 +113,26 @@
           }]
         };
 
-        
+        var renderer = new ClassBreaksRenderer();
+
+        var fillSymbol = new SimpleFillSymbol();
+        fillSymbol.setColor(new Color([0, 0, 0, 0]));
+        fillSymbol.outline.setColor(new Color([133, 133, 133, .5]));
+        fillSymbol.outline.setWidth(1);
+
+        var markerSymbol = new SimpleMarkerSymbol();
+        markerSymbol.setColor(new Color([227, 139, 79, 1]));
+        markerSymbol.setSize(12);
+        markerSymbol.outline.setColor(new Color([51, 51, 51, 1]));
+        markerSymbol.outline.setWidth(1);
+
+        renderer.backgroundFillSymbol = fillSymbol;
+
+        renderer.addBreak({
+          minValue: -9007199254740991,
+          maxValue: 9007199254740991,
+          symbol: markerSymbol
+        });
 
         //define a popup template
         var popupTemplate = new PopupTemplate({

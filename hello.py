@@ -77,19 +77,19 @@ def ottoCode():
 
 class locations(Resource):
     def get(self):
-        dictionary = ottoCode()
+        # dictionary = ottoCode()
         SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
         json_url = os.path.join(SITE_ROOT, "static/", "data1.json")
         data = json.load(open(json_url))
-        newData = []
-        for element in data:
-            if element['assetNumber'] in dictionary.keys():
-               element['val'] = dictionary[element['assetNumber']]
-               newData.append(element)
+        # newData = []
+        # for element in data:
+        #     if element['assetNumber'] in dictionary.keys():
+        #        element['val'] = dictionary[element['assetNumber']]
+        #        newData.append(element)
 
 
-        print(newData)
-        return newData, 200
+        # print(newData)
+        return data, 200
 
 @app.route('/')
 # @crossdomain(origin='*')
