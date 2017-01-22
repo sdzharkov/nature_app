@@ -12,22 +12,22 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		
 		@font-face{
 			font-family:"colabreg";     
-			src:url('static/fonts/colabreg-webfont.eot');     
-			src:url('static/fonts/colabreg-webfont.eot?#iefix') format('embedded-opentype'),         
-				url('static/fonts/colabreg-webfont.woff') format('woff'),         
-				url('static/fonts/colabreg-webfont.ttf') format('truetype'),         
-				url('static/fonts/colabreg-webfont.svg#ColabReg') format('svg');
+			src:url('../fonts/colabreg-webfont.eot');     
+			src:url('../fonts/colabreg-webfont.eot?#iefix') format('embedded-opentype'),         
+				url('../fonts/colabreg-webfont.woff') format('woff'),         
+				url('../fonts/colabreg-webfont.ttf') format('truetype'),         
+				url('../fonts/colabreg-webfont.svg#ColabReg') format('svg');
 			font-weight: normal;
     		font-style: normal;
 			}
 
 		@font-face{
 			font-family:'OswaldRegular';     
-			src:url('static/fonts/oswald-webfont.eot');     
-			src:url('static/fonts/oswald-webfont.eot?#iefix') format('embedded-opentype'),         
-				url('static/fonts/oswald-webfont.woff') format('woff'),         
-				url('static/fonts/oswald-webfont.ttf') format('truetype'),         
-				url('static/fonts/oswald-webfont.svg#OswaldRegular') format('svg');  
+			src:url('../fonts/oswald-webfont.eot');     
+			src:url('../fonts/oswald-webfont.eot?#iefix') format('embedded-opentype'),         
+				url('../fonts/oswald-webfont.woff') format('woff'),         
+				url('../fonts/oswald-webfont.ttf') format('truetype'),         
+				url('../fonts/oswald-webfont.svg#OswaldRegular') format('svg');  
 			font-weight: normal;
     		font-style: normal;
 			}
@@ -35,11 +35,11 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		
 		@font-face {
 			font-family: 'bebas_neueregular';
-			src: url('static/fonts/bebasneue-webfont.eot');
-			src: url('static/fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
-				 url('static/fonts/bebasneue-webfont.woff') format('woff'),
-				 url('static/fonts/bebasneue-webfont.ttf') format('truetype'),
-				 url('static/fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+			src: url('../fonts/bebasneue-webfont.eot');
+			src: url('../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+				 url('../fonts/bebasneue-webfont.woff') format('woff'),
+				 url('../fonts/bebasneue-webfont.ttf') format('truetype'),
+				 url('../fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
 			font-weight: normal;
     		font-style: normal;
 			}
@@ -328,23 +328,18 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 	a.button, .button,
 	button {
-	  background: #ff0000;
-	  background-image: -webkit-linear-gradient(top, #ff0000, #b82b63);
-	  background-image: -moz-linear-gradient(top, #ff0000, #b82b63);
-	  background-image: -ms-linear-gradient(top, #ff0000, #b82b63);
-	  background-image: -o-linear-gradient(top, #ff0000, #b82b63);
-	  background-image: linear-gradient(to bottom, #ff0000, #b82b63);
-	  -webkit-border-radius: 28;
-	  -moz-border-radius: 28;
-	  border-radius: 28px;
-	  font-family: Arial;
-	  color: #ffffff;
-	  font-size: 20px;
-	  padding: 10px 18px 10px 20px;
-	  text-decoration: none;
-	  color:white;
-	  height: 60px;
-	  width: 120px;
+		font-family: 'colabreg', Arial, Helvetica, sans-serif;
+		white-space: nowrap;
+	  	display: inline-block;
+	  	font-weight: bold;
+	  	text-decoration: none;
+	  	cursor: pointer;
+	  	margin-bottom: 20px;
+	  	line-height: normal;
+	  	padding: 6px 10px 6px 10px;
+	  	border:none;
+	  	height: 50px;
+	  	width: 100px;
 		}
 	a .button { position:relative }
 
@@ -357,7 +352,6 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	.button.full-width,
 	button.full-width{
 		width: 100px;
-		height: 100px;
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 		text-align: center; }
