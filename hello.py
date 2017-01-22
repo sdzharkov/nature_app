@@ -24,11 +24,11 @@ def ottoCode():
     #assert response.status_code == 200
     buildings = response.json()["Items"]
     i = 0
-    j = 0
+    leng = len(buildings)
     dictionary = {}
     for building in buildings:
         try:
-            print(i)
+            print("Loading " + str(i) + " out of " + str(leng))
             i = i + 1
             response = requests.get(building["Links"]["Self"] + "?fields=name;links", auth=('ou\pi-api-public', 'M53$dx7,d3fP8'))
             parent = requests.get(response.json()["Links"]["Parent"] + "?fields=name;links", auth=('ou\pi-api-public', 'M53$dx7,d3fP8'))
@@ -43,35 +43,26 @@ def ottoCode():
                 time1 = requests.get(response.json()["Links"]["Value"] + "?fields=name;items", auth=('ou\pi-api-public', 'M53$dx7,d3fP8'))
                 for item in time1.json()["Items"]:
                     if item["Name"] == "Cumulative Use":
-                        #print(item["Path"] + "\n" + str(item["Value"]["Value"]))
                         usage1 = item["Value"]["Value"]
 
                 time2 = requests.get(response.json()["Links"]["Value"] + "?time=*-1w&fields=name;items", auth=('ou\pi-api-public', 'M53$dx7,d3fP8'))
                 for item in time2.json()["Items"]:
                     if item["Name"] == "Cumulative Use":
-                        #print(item["Path"] + "\n" + str(item["Value"]["Value"]))
                         usage2 = item["Value"]["Value"]
 
                 time3 = requests.get(response.json()["Links"]["Value"] + "?time=*-2w&fields=name;items", auth=('ou\pi-api-public', 'M53$dx7,d3fP8'))
                 for item in time3.json()["Items"]:
                     if item["Name"] == "Cumulative Use":
-                        #print(item["Path"] + "\n" + str(item["Value"]["Value"]))
                         usage3 = item["Value"]["Value"]
-                print(str(usage1) + " " + str(usage2) + " " + str(usage3))
+                print("Asset " + str(assetNo) + " usage last week: " + str(usage2 - usage3) + ", usage this week:" + str(usage1 - usage2))
                 if (usage2 - usage3 != 0):
                     print((usage1 - usage2)/(usage2 - usage3))
                     dictionary[assetNo] = (usage1 - usage2)/(usage2 - usage3)
-                    #print(j)
-                    #j = j + 1
                 else:
                     if (usage1 - usage2 == 0):
                         dictionary[assetNo] = 1
-                        #print(j)
-                        #j = j + 1
                     else:
                         dictionary[assetNo] = 2
-                        #print(j)
-                        #j = j + 1
         except:
             print("MISS " + str(i-1))
             continue
@@ -98,7 +89,7 @@ class locations(Resource):
 # @crossdomain(origin='*')
 # @cross_origin()
 def hello_world():
-    return render_template('feature_layer1.html')
+    return render_template('feature_layer.html')
 
 
 @app.route('/vis')
@@ -117,10 +108,10 @@ def otto():
     #assert response.status_code == 200
     buildings = response.json()["Items"]
     i = 0
-    j = 0
+    leng = len(buildings)
     dictionary = {}
     for building in buildings:
-        print(i)
+        print("Loading: " + str(i) + " out of " + str(leng))
         i = i + 1
         response = requests.get(building["Links"]["Self"], auth=('ou\pi-api-public', 'M53$dx7,d3fP8'))
 
@@ -136,35 +127,26 @@ def otto():
             time1 = requests.get(response.json()["Links"]["Value"], auth=('ou\pi-api-public', 'M53$dx7,d3fP8'))
             for item in time1.json()["Items"]:
                 if item["Name"] == "Cumulative Use":
-                    #print(item["Path"] + "\n" + str(item["Value"]["Value"]))
                     usage1 = item["Value"]["Value"]
 
             time2 = requests.get(response.json()["Links"]["Value"] + "?time=*-1w", auth=('ou\pi-api-public', 'M53$dx7,d3fP8'))
             for item in time2.json()["Items"]:
                 if item["Name"] == "Cumulative Use":
-                    #print(item["Path"] + "\n" + str(item["Value"]["Value"]))
                     usage2 = item["Value"]["Value"]
 
             time3 = requests.get(response.json()["Links"]["Value"] + "?time=*-2w", auth=('ou\pi-api-public', 'M53$dx7,d3fP8'))
             for item in time3.json()["Items"]:
                 if item["Name"] == "Cumulative Use":
-                    #print(item["Path"] + "\n" + str(item["Value"]["Value"]))
                     usage3 = item["Value"]["Value"]
-            print(str(usage1) + " " + str(usage2) + " " + str(usage3))
+            print("Usage 1: "+ str(usage1) + ", Usage 2: " + str(usage2) + ", Usage 3: " + str(usage3))
             if (usage2 - usage3 != 0):
-                print((usage1 - usage2)/(usage2 - usage3))
+                print("Usage Ratio: " + str((usage1 - usage2)/(usage2 - usage3)))
                 dictionary[assetNo] = (usage1 - usage2)/(usage2 - usage3)
-                #print(j)
-                #j = j + 1
             else:
                 if (usage1 - usage2 == 0):
                     dictionary[assetNo] = 1
-                    #print(j)
-                    #j = j + 1
                 else:
                     dictionary[assetNo] = 2
-                    #print(j)
-                    #j = j + 1
     return dictionary
 
 api.add_resource(locations, '/locations')
