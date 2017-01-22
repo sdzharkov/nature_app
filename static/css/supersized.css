@@ -15,8 +15,8 @@ body { background:#111; height:100%; }
 	img { border:none; }
 	
 	#supersized-loader { position:absolute; top:50%; left:50%; z-index:0; width:60px; height:60px; margin:-30px 0 0 -30px; text-indent:-999em; 
-		background:url(../images/loading.gif) no-repeat center center;
-		background-image: -Webkit-image-set(url(../images/loading.gif) 1x, url(../images/loading@2x.gif) 2x);  /* Image for Retina */
+		background:url(static/images/loading.gif) no-repeat center center;
+		background-image: -Webkit-image-set(url(static/images/loading.gif) 1x, url(static/images/loading@2x.gif) 2x);  /* Image for Retina */
 		}
 	
 	#supersized {  display:block; position:fixed; left:0; top:0; overflow:hidden; z-index:-999; height:100%; width:100%; }
@@ -29,8 +29,8 @@ body { background:#111; height:100%; }
 			#supersized li.prevslide { z-index:-20; }
 			#supersized li.activeslide { z-index:-10; }
 			#supersized li.image-loading { 
-				background:#111 url(../images/loading.gif) no-repeat center center; 
-				background-image: -Webkit-image-set(url(../images/loading.gif) 1x, url(../images/loading@2x.gif) 2x);  /* Image for Retina */
+				background:#111 url(static/images/loading.gif) no-repeat center center; 
+				background-image: -Webkit-image-set(url(static/images/loading.gif) 1x, url(static/images/loading@2x.gif) 2x);  /* Image for Retina */
 				width:100%; height:100%; z-index:10000000; }
 				#supersized li.image-loading img{ visibility:hidden; }
 			#supersized li.prevslide img, #supersized li.activeslide img{ display:inline; }
@@ -54,6 +54,6 @@ body { background:#111; height:100%; }
 .white_nav .supersized-nav li a, .supersized-nav li a { width: 28px; height: 20px; display: block; position:relative; padding:4px 0px 4px 0px; cursor: pointer; letter-spacing:1.8px; }
 
 .white_nav .supersized-nav li a.active, .supersized-nav li a.active {  
-	background: url(../images/supersized/nav_arrow.png) 0px 0px no-repeat;
-	background-image: -Webkit-image-set(url(../images/supersized/nav_arrow.png) 1x, url(../images/supersized/nav_arrow@2x.png) 2x);  /* Image for Retina */
+	background: url(static/images/supersized/nav_arrow.png) 0px 0px no-repeat;
+	background-image: -Webkit-image-set(url(static/images/supersized/nav_arrow.png) 1x, url(static/images/supersized/nav_arrow@2x.png) 2x);  /* Image for Retina */
 	color:white; width: 42px; left:-7px; text-indent:13px; }

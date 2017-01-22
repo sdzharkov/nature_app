@@ -85,7 +85,12 @@ class locations(Resource):
         # print(newData)
         return newData, 200
 
+
 @app.route('/')
+def perry():
+    return render_template('index.html')
+
+@app.route('/map')
 # @crossdomain(origin='*')
 # @cross_origin()
 def hello_world():

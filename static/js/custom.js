@@ -1,20 +1,7 @@
-/**
-	STUDIO POINT - Parallax Responsive Retina Ready
- 	Copyright (c) 2013, Subramanian 
 
-	Author: Subramanian
-    Profile: themeforest.net/user/FMedia/
-	
-    Version: 1.0.0
-	Release Date: February 2013
-	
-**/	
-
-
-
-/* preload images are defined here */
+/* preload images  */
 var preLoadImgs = [];
-	preLoadImgs.push("images/loading.gif");
+	preLoadImgs.push("static/images/loading.gif");
 		
 /* Responsive define varaible */
 	var isMobile = $(window).width() <= 767;
@@ -31,11 +18,11 @@ var preLoadImgs = [];
 		retinaDevice = window.devicePixelRatio !== undefined &&  window.devicePixelRatio > 1 ? true : false;
 		
 		if(retinaDevice){
-			preLoadImgs.push("images/sprite@2x.png");
-			preLoadImgs.push("images/next_previous_button@2x.png");
+			preLoadImgs.push("/static/images/sprite@2x.png");
+			preLoadImgs.push("/static/images/next_previous_button@2x.png");
 		}else{
-			preLoadImgs.push("images/sprite.png");
-			preLoadImgs.push("images/next_previous_button.png");
+			preLoadImgs.push("/static/images/sprite.png");
+			preLoadImgs.push("/static/images/next_previous_button.png");
 		}
 		
 		if(isMobile || $(".singlePage").height() != null){
@@ -46,7 +33,7 @@ var preLoadImgs = [];
 		
 		
 		
-		var iimg = !retinaDevice ? "images/supersized/pause.png" : "images/supersized/pause@2x.png";
+		var iimg = !retinaDevice ? "/static/images/supersized/pause.png" : "/static/images/supersized/pause@2x.png";
 		$("#pauseplay").attr("src",iimg)
 				
 	});

@@ -1,38 +1,6 @@
 /**
-	STUDIO POINT - Parallax Responsive Retina Ready
- 	Copyright (c) 2013, Subramanian 
-
-	Author: Subramanian
-    Profile: themeforest.net/user/FMedia/
-	
-    Version: 1.0.0
-	Release Date: February 2013
-	
-	Basic styles are added in this file
-	
-**/
-
-/*
-* Skeleton V1.1
-* Copyright 2011, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 8/17/2011
-*/
-
-
-/* ---------------------------------------------------------------------- */
-/*	Reset & Clearfix (http://meyerweb.com/eric/tools/css/reset/)
-/* ---------------------------------------------------------------------- */
-
-
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,and,address,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,input,textarea,select{background:transparent;border:0;font-size:100%;margin:0;outline:0;padding:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}del{text-decoration:line-through}hr{background:transparent;border:0;clear:both;color:transparent;height:1px;margin:0;padding:0}mark{background-color:#222;font-style:italic}input,select{vertical-align:middle}ins{background-color:black;color:white;text-decoration:none}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}
 
-
-
-/* #Basic Styles
-================================================== */
 	body {
 		font: 14px/1.7 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
 		font-weight:lighter;
@@ -86,7 +54,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		text-transform: uppercase;
 		}
 	.header .nav ul li .arrow{
-		background:url(../images/menu_arrow.png) bottom center no-repeat;
+		background:url(static/images/menu_arrow.png) bottom center no-repeat;
 	}
 
 /* #Typography
@@ -200,10 +168,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	.pad { padding: 6px 10px 8px 10px; }
 	
 	a.no_decor{ text-decoration:none; }
-	
 
-/* #Lists
-================================================== */
 	ul, ol { margin-bottom: 20px; }
 	ul { list-style: none outside; }
 	ol { list-style: decimal; }
@@ -223,50 +188,50 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	.list1, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .list10{	
 		padding:0px 5px 3px 28px; height:20px; list-style-type:none; text-align:left;  display:inline;
 		}
-	.list1{	background:url(../images/list/icon1.png) no-repeat left; 
-			background-image: -Webkit-image-set(url(../images/list/icon1.png) 1x, url(../images/list/icon1@2x.png) 2x);  /* Image for Retina */	}
-	.list2{ background:url(../images/list/icon2.png) no-repeat left;
-			background-image: -Webkit-image-set(url(../images/list/icon2.png) 1x, url(../images/list/icon2@2x.png) 2x);  /* Image for Retina */	}
-	.list3{	background:url(../images/list/icon3.png) no-repeat left;
-			background-image: -Webkit-image-set(url(../images/list/icon3.png) 1x, url(../images/list/icon3@2x.png) 2x);  /* Image for Retina */	}
-	.list4{	background:url(../images/list/icon4.png) no-repeat left;
-			background-image: -Webkit-image-set(url(../images/list/icon4.png) 1x, url(../images/list/icon4@2x.png) 2x);  /* Image for Retina */	}
-	.list5{	background:url(../images/list/icon5.png) no-repeat left;
-			background-image: -Webkit-image-set(url(../images/list/icon5.png) 1x, url(../images/list/icon5@2x.png) 2x);  /* Image for Retina */	}
-	.list6{	background:url(../images/list/icon6.png) no-repeat left;
-			background-image: -Webkit-image-set(url(../images/list/icon6.png) 1x, url(../images/list/icon6@2x.png) 2x);  /* Image for Retina */	}
-	.list7{	background:url(../images/list/icon7.png) no-repeat left;
-			background-image: -Webkit-image-set(url(../images/list/icon7.png) 1x, url(../images/list/icon7@2x.png) 2x);  /* Image for Retina */	}
-	.list8{	background:url(../images/list/icon8.png) no-repeat left;
-			background-image: -Webkit-image-set(url(../images/list/icon8.png) 1x, url(../images/list/icon8@2x.png) 2x);  /* Image for Retina */	}
-	.list9{	background:url(../images/list/icon9.png) no-repeat left;
-			background-image: -Webkit-image-set(url(../images/list/icon9.png) 1x, url(../images/list/icon9@2x.png) 2x);  /* Image for Retina */	}
-	.list10{ background:url(../images/list/icon10.png) no-repeat left;
-				background-image: -Webkit-image-set(url(../images/list/icon10.png) 1x, url(../images/list/icon10@2x.png) 2x);  /* Image for Retina */	}
+	.list1{	background:url(static/images/list/icon1.png) no-repeat left; 
+			background-image: -Webkit-image-set(url(static/images/list/icon1.png) 1x, url(static/images/list/icon1@2x.png) 2x);  /* Image for Retina */	}
+	.list2{ background:url(static/images/list/icon2.png) no-repeat left;
+			background-image: -Webkit-image-set(url(static/images/list/icon2.png) 1x, url(static/images/list/icon2@2x.png) 2x);  /* Image for Retina */	}
+	.list3{	background:url(static/images/list/icon3.png) no-repeat left;
+			background-image: -Webkit-image-set(url(static/images/list/icon3.png) 1x, url(static/images/list/icon3@2x.png) 2x);  /* Image for Retina */	}
+	.list4{	background:url(static/images/list/icon4.png) no-repeat left;
+			background-image: -Webkit-image-set(url(static/images/list/icon4.png) 1x, url(static/images/list/icon4@2x.png) 2x);  /* Image for Retina */	}
+	.list5{	background:url(static/images/list/icon5.png) no-repeat left;
+			background-image: -Webkit-image-set(url(static/images/list/icon5.png) 1x, url(static/images/list/icon5@2x.png) 2x);  /* Image for Retina */	}
+	.list6{	background:url(static/images/list/icon6.png) no-repeat left;
+			background-image: -Webkit-image-set(url(static/images/list/icon6.png) 1x, url(static/images/list/icon6@2x.png) 2x);  /* Image for Retina */	}
+	.list7{	background:url(static/images/list/icon7.png) no-repeat left;
+			background-image: -Webkit-image-set(url(static/images/list/icon7.png) 1x, url(static/images/list/icon7@2x.png) 2x);  /* Image for Retina */	}
+	.list8{	background:url(static/images/list/icon8.png) no-repeat left;
+			background-image: -Webkit-image-set(url(static/images/list/icon8.png) 1x, url(static/images/list/icon8@2x.png) 2x);  /* Image for Retina */	}
+	.list9{	background:url(static/images/list/icon9.png) no-repeat left;
+			background-image: -Webkit-image-set(url(static/images/list/icon9.png) 1x, url(static/images/list/icon9@2x.png) 2x);  /* Image for Retina */	}
+	.list10{ background:url(static/images/list/icon10.png) no-repeat left;
+				background-image: -Webkit-image-set(url(static/images/list/icon10.png) 1x, url(static/images/list/icon10@2x.png) 2x);  /* Image for Retina */	}
 	
 	/* White List */
 	.list1_white, .list2_white, .list4_white, .list5_white, 
 	.list6_white, .list7_white, .list8_white, .list9_white, .list10_white{	
 		padding:0px 5px 3px 28px; height:20px; list-style-type:none; text-align:left;  display:inline;
 		}
-	.list1_white{	background:url(../images/list/icon1_white.png) no-repeat left;
-					background-image: -Webkit-image-set(url(../images/list/icon1_white.png) 1x, url(../images/list/icon1_white@2x.png) 2x);  /* Image for Retina */	}
-	.list2_white{ 	background:url(../images/list/icon2_white.png) no-repeat left;
-					background-image: -Webkit-image-set(url(../images/list/icon2_white.png) 1x, url(../images/list/icon2_white@2x.png) 2x);  /* Image for Retina */	}
-	.list4_white{	background:url(../images/list/icon4_white.png) no-repeat left;
-					background-image: -Webkit-image-set(url(../images/list/icon4_white.png) 1x, url(../images/list/icon4_white@2x.png) 2x);  /* Image for Retina */	}
-	.list5_white{	background:url(../images/list/icon5_white.png) no-repeat left;
-					background-image: -Webkit-image-set(url(../images/list/icon5_white.png) 1x, url(../images/list/icon5_white@2x.png) 2x);  /* Image for Retina */	}
-	.list6_white{	background:url(../images/list/icon6_white.png) no-repeat left;
-					background-image: -Webkit-image-set(url(../images/list/icon6_white.png) 1x, url(../images/list/icon6_white@2x.png) 2x);  /* Image for Retina */	}
-	.list7_white{	background:url(../images/list/icon7_white.png) no-repeat left;
-					background-image: -Webkit-image-set(url(../images/list/icon7_white.png) 1x, url(../images/list/icon7_white@2x.png) 2x);  /* Image for Retina */	}
-	.list8_white{	background:url(../images/list/icon8_white.png) no-repeat left;
-					background-image: -Webkit-image-set(url(../images/list/icon8_white.png) 1x, url(../images/list/icon8_white@2x.png) 2x);  /* Image for Retina */	}
-	.list9_white{	background:url(../images/list/icon9_white.png) no-repeat left;
-					background-image: -Webkit-image-set(url(../images/list/icon9_white.png) 1x, url(../images/list/icon9_white@2x.png) 2x);  /* Image for Retina */	}
-	.list10_white{ 	background:url(../images/list/icon10_white.png) no-repeat left;
-					background-image: -Webkit-image-set(url(../images/list/icon10_white.png) 1x, url(../images/list/icon10_white@2x.png) 2x);  /* Image for Retina */	}
+	.list1_white{	background:url(static/images/list/icon1_white.png) no-repeat left;
+					background-image: -Webkit-image-set(url(static/images/list/icon1_white.png) 1x, url(static/images/list/icon1_white@2x.png) 2x);  /* Image for Retina */	}
+	.list2_white{ 	background:url(static/images/list/icon2_white.png) no-repeat left;
+					background-image: -Webkit-image-set(url(static/images/list/icon2_white.png) 1x, url(static/images/list/icon2_white@2x.png) 2x);  /* Image for Retina */	}
+	.list4_white{	background:url(static/images/list/icon4_white.png) no-repeat left;
+					background-image: -Webkit-image-set(url(static/images/list/icon4_white.png) 1x, url(static/images/list/icon4_white@2x.png) 2x);  /* Image for Retina */	}
+	.list5_white{	background:url(static/images/list/icon5_white.png) no-repeat left;
+					background-image: -Webkit-image-set(url(static/images/list/icon5_white.png) 1x, url(static/images/list/icon5_white@2x.png) 2x);  /* Image for Retina */	}
+	.list6_white{	background:url(static/images/list/icon6_white.png) no-repeat left;
+					background-image: -Webkit-image-set(url(static/images/list/icon6_white.png) 1x, url(static/images/list/icon6_white@2x.png) 2x);  /* Image for Retina */	}
+	.list7_white{	background:url(static/images/list/icon7_white.png) no-repeat left;
+					background-image: -Webkit-image-set(url(static/images/list/icon7_white.png) 1x, url(static/images/list/icon7_white@2x.png) 2x);  /* Image for Retina */	}
+	.list8_white{	background:url(static/images/list/icon8_white.png) no-repeat left;
+					background-image: -Webkit-image-set(url(static/images/list/icon8_white.png) 1x, url(static/images/list/icon8_white@2x.png) 2x);  /* Image for Retina */	}
+	.list9_white{	background:url(static/images/list/icon9_white.png) no-repeat left;
+					background-image: -Webkit-image-set(url(static/images/list/icon9_white.png) 1x, url(static/images/list/icon9_white@2x.png) 2x);  /* Image for Retina */	}
+	.list10_white{ 	background:url(static/images/list/icon10_white.png) no-repeat left;
+					background-image: -Webkit-image-set(url(static/images/list/icon10_white.png) 1x, url(static/images/list/icon10_white@2x.png) 2x);  /* Image for Retina */	}
 
 /* #Images
 ================================================== */
@@ -299,55 +264,55 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 /*	service image icons*/
 	.service_icon1{
-		background: url(../images/service_img1.png) center no-repeat; 
-		background-image: -Webkit-image-set(url(../images/service_img1.png) 1x, url(../images/service_img1@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/service_img1.png) center no-repeat; 
+		background-image: -Webkit-image-set(url(static/images/service_img1.png) 1x, url(static/images/service_img1@2x.png) 2x);  /* Image for Retina */
 		}
 	
 	.service_icon2{
-		background: url(../images/service_img2.png) center no-repeat; 
-		background-image: -Webkit-image-set(url(../images/service_img2.png) 1x, url(../images/service_img2@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/service_img2.png) center no-repeat; 
+		background-image: -Webkit-image-set(url(static/images/service_img2.png) 1x, url(static/images/service_img2@2x.png) 2x);  /* Image for Retina */
 		}
 	
 	.service_icon3{
-		background: url(../images/service_img3.png) center no-repeat; 
-		background-image: -Webkit-image-set(url(../images/service_img3.png) 1x, url(../images/service_img3@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/service_img3.png) center no-repeat; 
+		background-image: -Webkit-image-set(url(static/images/service_img3.png) 1x, url(static/images/service_img3@2x.png) 2x);  /* Image for Retina */
 		}
 	
 	.service_icon4{
-		background: url(../images/service_img4.png) center no-repeat; 
-		background-image: -Webkit-image-set(url(../images/service_img4.png) 1x, url(../images/service_img4@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/service_img4.png) center no-repeat; 
+		background-image: -Webkit-image-set(url(static/images/service_img4.png) 1x, url(static/images/service_img4@2x.png) 2x);  /* Image for Retina */
 		}
 	
 	.service_icon5{
-		background: url(../images/service_img5.png) center no-repeat; 
-		background-image: -Webkit-image-set(url(../images/service_img5.png) 1x, url(../images/service_img5@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/service_img5.png) center no-repeat; 
+		background-image: -Webkit-image-set(url(static/images/service_img5.png) 1x, url(static/images/service_img5@2x.png) 2x);  /* Image for Retina */
 		}
 	
 	
 	
 	.service_icon1_w{
-		background: url(../images/service_img1_w.png) center no-repeat; 
-		background-image: -Webkit-image-set(url(../images/service_img1_w.png) 1x, url(../images/service_img1_w@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/service_img1_w.png) center no-repeat; 
+		background-image: -Webkit-image-set(url(static/images/service_img1_w.png) 1x, url(static/images/service_img1_w@2x.png) 2x);  /* Image for Retina */
 		}
 	
 	.service_icon2_w{
-		background: url(../images/service_img2_w.png) center no-repeat; 
-		background-image: -Webkit-image-set(url(../images/service_img2_w.png) 1x, url(../images/service_img2_w@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/service_img2_w.png) center no-repeat; 
+		background-image: -Webkit-image-set(url(static/images/service_img2_w.png) 1x, url(static/images/service_img2_w@2x.png) 2x);  /* Image for Retina */
 		}
 	
 	.service_icon3_w{
-		background: url(../images/service_img3_w.png) center no-repeat; 
-		background-image: -Webkit-image-set(url(../images/service_img3_w.png) 1x, url(../images/service_img3_w@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/service_img3_w.png) center no-repeat; 
+		background-image: -Webkit-image-set(url(static/images/service_img3_w.png) 1x, url(static/images/service_img3_w@2x.png) 2x);  /* Image for Retina */
 		}
 	
 	.service_icon4_w{
-		background: url(../images/service_img4_w.png) center no-repeat; 
-		background-image: -Webkit-image-set(url(../images/service_img4_w.png) 1x, url(../images/service_img4_w@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/service_img4_w.png) center no-repeat; 
+		background-image: -Webkit-image-set(url(static/images/service_img4_w.png) 1x, url(static/images/service_img4_w@2x.png) 2x);  /* Image for Retina */
 		}
 	
 	.service_icon5_w{
-		background: url(../images/service_img5_w.png) center no-repeat; 
-		background-image: -Webkit-image-set(url(../images/service_img5_w.png) 1x, url(../images/service_img5_w@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/service_img5_w.png) center no-repeat; 
+		background-image: -Webkit-image-set(url(static/images/service_img5_w.png) 1x, url(static/images/service_img5_w@2x.png) 2x);  /* Image for Retina */
 		}
 			
 /* #Buttons
@@ -617,8 +582,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		line-height: 1.25;
 		padding: 29px 10px 0px 0px;
 		margin: -10px 10px 0px 0px;
-		background: url(../images/calender.png) no-repeat 0px 0px;
-		background-image: -Webkit-image-set(url(../images/calender.png) 1x, url(../images/calender@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/calender.png) no-repeat 0px 0px;
+		background-image: -Webkit-image-set(url(static/images/calender.png) 1x, url(static/images/calender@2x.png) 2x);  /* Image for Retina */
 	 	}				
 
 
@@ -645,141 +610,65 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		transition: all 0.4s ease-in-out;
 		}
 
-	.social_bookmarks li a {
-		float:left;
-		width:30px;
-		min-height:20px;
-		height:100%;
-		display: block;
-		text-indent: -9999px;
-		margin:0px;	
-		padding:0;
-		outline: none;
-		}
 	
-	.social_bookmarks .twitter {
-		background: transparent url(../images/social/black/twitter.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/twitter.png) 1x, url(../images/social/black/twitter@2x.png) 2x);  /* Image for Retina */	}
 	
-	.social_bookmarks .facebook {
-		background: transparent url(../images/social/black/facebook.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/facebook.png) 1x, url(../images/social/black/facebook@2x.png) 2x);  /* Image for Retina */	}
-	
-	.social_bookmarks .gplus {
-		background: transparent url(../images/social/black/gplus.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/gplus.png) 1x, url(../images/social/black/gplus@2x.png) 2x);  /* Image for Retina */	}
-	
-	.social_bookmarks .linkedin {
-		background: transparent url(../images/social/black/linkedin.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/linkedin.png) 1x, url(../images/social/black/linkedin@2x.png) 2x);  /* Image for Retina */	}
-	
-	.social_bookmarks .rss {
-		background: transparent url(../images/social/black/rss.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/rss.png) 1x, url(../images/social/black/rss@2x.png) 2x);  /* Image for Retina */	}
-	
-	.social_bookmarks .digg {
-		background: transparent url(../images/social/black/digg.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/digg.png) 1x, url(../images/social/black/digg@2x.png) 2x);  /* Image for Retina */	}
-	
-	.social_bookmarks .delicious {
-		background: transparent url(../images/social/black/delicious.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/delicious.png) 1x, url(../images/social/black/delicious@2x.png) 2x);  /* Image for Retina */	}
-	
-	.social_bookmarks .youtube {
-		background: transparent url(../images/social/black/youtube.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/youtube.png) 1x, url(../images/social/black/youtube@2x.png) 2x);  /* Image for Retina */	}
-	
-	.social_bookmarks .vimeo {
-		background: transparent url(../images/social/black/vimeo.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/vimeo.png) 1x, url(../images/social/black/vimeo@2x.png) 2x);  /* Image for Retina */	}
-	
-	.social_bookmarks .skype {
-		background: transparent url(../images/social/black/skype.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/skype.png) 1x, url(../images/social/black/skype@2x.png) 2x);  /* Image for Retina */	}
-		
-	.social_bookmarks .dribbble {
-		background: transparent url(../images/social/black/dribbble.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/dribbble.png) 1x, url(../images/social/black/dribbble@2x.png) 2x);  /* Image for Retina */	}
-		
-	.social_bookmarks .ichat {
-		background: transparent url(../images/social/black/ichat.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/ichat.png) 1x, url(../images/social/black/ichat@2x.png) 2x);  /* Image for Retina */	}
-		
-	.social_bookmarks .deviantart {
-		background: transparent url(../images/social/black/deviantart.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/deviantart.png) 1x, url(../images/social/black/deviantart@2x.png) 2x);  /* Image for Retina */	}
-		
-	.social_bookmarks .stumbleupon {
-		background: transparent url(../images/social/black/stumbleupon.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/black/stumbleupon.png) 1x, url(../images/social/black/stumbleupon@2x.png) 2x);  /* Image for Retina */	}	
-		
-	.social_bookmarks .gplus:hover, .social_bookmarks .linkedin:hover, 
-	.social_bookmarks .twitter:hover, .social_bookmarks .facebook:hover, 
-	.social_bookmarks .rss:hover, .social_bookmarks .digg:hover,
-	.social_bookmarks .delicious:hover, .social_bookmarks .youtube:hover,
-	.social_bookmarks .vimeo:hover, .social_bookmarks .skype:hover,
-	.social_bookmarks .dribbble:hover, .social_bookmarks .ichat:hover,
-	.social_bookmarks .deviantart:hover, .social_bookmarks .stumbleupon:hover{
-		background-position: 0% 100% ;	
-		}
-	
-	/* White Theme*/
+
 	
 	.social_bookmarks .twitter_white {
-		background: transparent url(../images/social/white/twitter.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/twitter.png) 1x, url(../images/social/white/twitter@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/twitter.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/twitter.png) 1x, url(static/images/social/white/twitter@2x.png) 2x);  /* Image for Retina */	}
 	
 	.social_bookmarks .facebook_white {
-		background: transparent url(../images/social/white/facebook.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/facebook.png) 1x, url(../images/social/white/facebook@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/facebook.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/facebook.png) 1x, url(static/images/social/white/facebook@2x.png) 2x);  /* Image for Retina */	}
 	
 	.social_bookmarks .gplus_white {
-		background: transparent url(../images/social/white/gplus.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/gplus.png) 1x, url(../images/social/white/gplus@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/gplus.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/gplus.png) 1x, url(static/images/social/white/gplus@2x.png) 2x);  /* Image for Retina */	}
 	
 	.social_bookmarks .linkedin_white {
-		background: transparent url(../images/social/white/linkedin.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/linkedin.png) 1x, url(../images/social/white/linkedin@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/linkedin.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/linkedin.png) 1x, url(static/images/social/white/linkedin@2x.png) 2x);  /* Image for Retina */	}
 	
 	.social_bookmarks .rss_white {
-		background: transparent url(../images/social/white/rss.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/rss.png) 1x, url(../images/social/white/rss@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/rss.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/rss.png) 1x, url(static/images/social/white/rss@2x.png) 2x);  /* Image for Retina */	}
 	
 	.social_bookmarks .digg_white {
-		background: transparent url(../images/social/white/digg.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/digg.png) 1x, url(../images/social/white/digg@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/digg.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/digg.png) 1x, url(static/images/social/white/digg@2x.png) 2x);  /* Image for Retina */	}
 	
 	.social_bookmarks .delicious_white {
-		background: transparent url(../images/social/white/delicious.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/delicious.png) 1x, url(../images/social/white/delicious@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/delicious.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/delicious.png) 1x, url(static/images/social/white/delicious@2x.png) 2x);  /* Image for Retina */	}
 	
 	.social_bookmarks .youtube_white {
-		background: transparent url(../images/social/white/youtube.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/youtube.png) 1x, url(../images/social/white/youtube@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/youtube.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/youtube.png) 1x, url(static/images/social/white/youtube@2x.png) 2x);  /* Image for Retina */	}
 	
 	.social_bookmarks .vimeo_white {
-		background: transparent url(../images/social/white/vimeo.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/vimeo.png) 1x, url(../images/social/white/vimeo@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/vimeo.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/vimeo.png) 1x, url(static/images/social/white/vimeo@2x.png) 2x);  /* Image for Retina */	}
 	
 	.social_bookmarks .skype_white {
-		background: transparent url(../images/social/white/skype.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/skype.png) 1x, url(../images/social/white/skype@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/skype.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/skype.png) 1x, url(static/images/social/white/skype@2x.png) 2x);  /* Image for Retina */	}
 		
 	.social_bookmarks .dribbble_white {
-		background: transparent url(../images/social/white/dribbble.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/dribbble.png) 1x, url(../images/social/white/dribbble@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/dribbble.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/dribbble.png) 1x, url(static/images/social/white/dribbble@2x.png) 2x);  /* Image for Retina */	}
 		
 	.social_bookmarks .ichat_white {
-		background: transparent url(../images/social/white/ichat.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/ichat.png) 1x, url(../images/social/white/ichat@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/ichat.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/ichat.png) 1x, url(static/images/social/white/ichat@2x.png) 2x);  /* Image for Retina */	}
 		
 	.social_bookmarks .deviantart_white {
-		background: transparent url(../images/social/white/deviantart.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/deviantart.png) 1x, url(../images/social/white/deviantart@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/deviantart.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/deviantart.png) 1x, url(static/images/social/white/deviantart@2x.png) 2x);  /* Image for Retina */	}
 		
 	.social_bookmarks .stumbleupon_white {
-		background: transparent url(../images/social/white/stumbleupon.png) top left no-repeat;
-		background-image: -Webkit-image-set(url(../images/social/white/stumbleupon.png) 1x, url(../images/social/white/stumbleupon@2x.png) 2x);  /* Image for Retina */	}
+		background: transparent url(static/images/social/white/stumbleupon.png) top left no-repeat;
+		background-image: -Webkit-image-set(url(static/images/social/white/stumbleupon.png) 1x, url(static/images/social/white/stumbleupon@2x.png) 2x);  /* Image for Retina */	}
 	
 	.social_bookmarks .gplus_white:hover, .social_bookmarks .linkedin_white:hover, 
 	.social_bookmarks .twitter_white:hover, .social_bookmarks .facebook_white:hover, 
@@ -824,7 +713,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	
 	.tipsy-arrow { 
 		position: absolute; 
-		background: url('../images/tipsy.gif') no-repeat;
+		background: url('static/images/tipsy.gif') no-repeat;
 		background-position: bottom left; 
 		width: 9px; 
 		height: 5px; 
@@ -835,10 +724,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	
 	a.hastip, a.hastip:visited { text-decoration:none }
 	
-/* End tipsy tooltips style */
-
-
-/* Static content (The static pages below the home page) style */		
+	
 .contentWrapper{
 	width:100%;
 	overflow-x:hidden; 
@@ -899,13 +785,13 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	overflow:hidden;
 	}
 .overlayPattern{ 
-	background: url(../images/background_overlay.png) repeat fixed; 
+	background: url(static/images/background_overlay.png) repeat fixed; 
 	}
 
 
 
 .parallaxPattern{
-	background: url(../images/parallax_overlay.png) repeat fixed;
+	background: url(static/images/parallax_overlay.png) repeat fixed;
 	}
 
 /* Video style */
@@ -928,8 +814,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		}
 	
 	.video_hover{
-		background:url(../images/video_over.png);
-		background-image: -Webkit-image-set(url(../images/video_over.png) 1x, url(../images/video_over@2x.png) 2x);  /* Image for Retina */
+		background:url(static/images/video_over.png);
+		background-image: -Webkit-image-set(url(static/images/video_over.png) 1x, url(static/images/video_over@2x.png) 2x);  /* Image for Retina */
 		background-position:center;
 		display:inline-block;
 		position:absolute;
@@ -974,18 +860,18 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		}
 	
 	.accordion dt .closeOpen{
-		background : transparent url(../images/accordion_icon.png);
-		background-image: -Webkit-image-set(url(../images/accordion_icon.png) 1x, url(../images/accordion_icon@2x.png) 2x);  /* Image for Retina */
+		background : transparent url(static/images/accordion_icon.png);
+		background-image: -Webkit-image-set(url(static/images/accordion_icon.png) 1x, url(static/images/accordion_icon@2x.png) 2x);  /* Image for Retina */
 	}
 	
 	.darkStyle .accordion dt .closeOpen{
-		background : transparent url(../images/accordion_white_icon.png);
-		background-image: -Webkit-image-set(url(../images/accordion_white_icon.png) 1x, url(../images/accordion_white_icon@2x.png) 2x);  /* Image for Retina */
+		background : transparent url(static/images/accordion_white_icon.png);
+		background-image: -Webkit-image-set(url(static/images/accordion_white_icon.png) 1x, url(static/images/accordion_white_icon@2x.png) 2x);  /* Image for Retina */
 	}
 	
 	.lightStyle .accordion dt .closeOpen{
-		background : transparent url(../images/accordion_icon.png);
-		background-image: -Webkit-image-set(url(../images/accordion_icon.png) 1x, url(../images/accordion_icon@2x.png) 2x);  /* Image for Retina */
+		background : transparent url(static/images/accordion_icon.png);
+		background-image: -Webkit-image-set(url(static/images/accordion_icon.png) 1x, url(static/images/accordion_icon@2x.png) 2x);  /* Image for Retina */
 	}
 	
 	
@@ -1058,19 +944,19 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	.overlay.zoom {
 		display: block;
 		background: transparent;
-		background: url(../images/overlay_zoom.png) no-repeat center center;
+		background: url(static/images/overlay_zoom.png) no-repeat center center;
 		zoom: 1;
 		}
 	
 	.overlay.link {
 		display: block;
-		background: url(../images/overlay_link.png) no-repeat center center;
+		background: url(static/images/overlay_link.png) no-repeat center center;
 		zoom: 1;
 		}
 	.overlay.detail{
 		display: block;
 		background: transparent;
-		background: url(../images/overlay_detail.png) no-repeat center center;
+		background: url(static/images/overlay_detail.png) no-repeat center center;
 		zoom: 1;
 		}
 		
@@ -1078,7 +964,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		display: block;
 		overflow:hidden;
 		background: transparent;
-		background: url(../images/overlay_social.png) no-repeat center center;
+		background: url(static/images/overlay_social.png) no-repeat center center;
 		zoom: 1;
 		}
 
@@ -1164,8 +1050,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 	.move_down {
 		height:50px;
-		background:url(../images/footer_bg_black.png) center top no-repeat;
-		background-image: -Webkit-image-set(url(../images/footer_bg_black.png) 1x, url(../images/footer_bg_black@2x.png) 2x);  /* Image for Retina */
+		background:url(static/images/footer_bg_black.png) center top no-repeat;
+		background-image: -Webkit-image-set(url(static/images/footer_bg_black.png) 1x, url(static/images/footer_bg_black@2x.png) 2x);  /* Image for Retina */
 		position:relative;
 		display:block;
 		margin: 0 auto;
@@ -1178,8 +1064,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	.move_down span {
 		height:36px;
 		width:36px;
-		background: url(../images/sprite.png) 100% 56%;
-		background-image: -Webkit-image-set(url(../images/sprite.png) 1x, url(../images/sprite@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/sprite.png) 100% 56%;
+		background-image: -Webkit-image-set(url(static/images/sprite.png) 1x, url(static/images/sprite@2x.png) 2x);  /* Image for Retina */
 		position:relative;
 		text-align:center;
 		display:block;
@@ -1209,8 +1095,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		
 	.move_down_white {
 		height:50px;
-		background:url(../images/footer_bg_white.png) center top no-repeat;
-		background-image: -Webkit-image-set(url(../images/footer_bg_white.png) 1x, url(../images/footer_bg_white@2x.png) 2x);  /* Image for Retina */
+		background:url(static/images/footer_bg_white.png) center top no-repeat;
+		background-image: -Webkit-image-set(url(static/images/footer_bg_white.png) 1x, url(static/images/footer_bg_white@2x.png) 2x);  /* Image for Retina */
 		position:relative;
 		display:block;
 		margin: 0 auto;
@@ -1222,8 +1108,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	.move_down_white span {
 		height:36px;
 		width:36px;
-		background: url(../images/sprite.png) 100% 43%;
-		background-image: -Webkit-image-set(url(../images/sprite.png) 1x, url(../images/sprite@2x.png) 2x);  /* Image for Retina */
+		background: url(static/images/sprite.png) 100% 43%;
+		background-image: -Webkit-image-set(url(static/images/sprite.png) 1x, url(static/images/sprite@2x.png) 2x);  /* Image for Retina */
 		position:relative;
 		text-align:center;
 		display:block;
@@ -1277,8 +1163,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		}
 		
 	.move_up{
-		background: #111 url(../images/sprite.png) 0% 42%;
-		background-image: -Webkit-image-set(url(../images/sprite.png) 1x, url(../images/sprite@2x.png) 2x);  /* Image for Retina */
+		background: #111 url(static/images/sprite.png) 0% 42%;
+		background-image: -Webkit-image-set(url(static/images/sprite.png) 1x, url(static/images/sprite@2x.png) 2x);  /* Image for Retina */
 		border:#333 solid 2px;
 		-moz-border-radius: 100%;
 		-webkit-border-radius: 100%;
@@ -1286,8 +1172,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		}
 		
 	.move_up_white {
-		background: #eeeeee url(../images/sprite.png) 0% 55%;
-		background-image: -Webkit-image-set(url(../images/sprite.png) 1x, url(../images/sprite@2x.png) 2x);  /* Image for Retina */
+		background: #eeeeee url(static/images/sprite.png) 0% 55%;
+		background-image: -Webkit-image-set(url(static/images/sprite.png) 1x, url(static/images/sprite@2x.png) 2x);  /* Image for Retina */
 		border:#cccccc solid 2px;
 		-moz-border-radius: 100%;
 		-webkit-border-radius: 100%;
@@ -1338,8 +1224,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		right:-40px;
 		width:70px; 
 		height:30px;
-		background : transparent url(../images/sprite.png);
-		background-image: -Webkit-image-set(url(../images/sprite.png) 1x, url(../images/sprite@2x.png) 2x);  /* Image for Retina */
+		background : transparent url(static/images/sprite.png);
+		background-image: -Webkit-image-set(url(static/images/sprite.png) 1x, url(static/images/sprite@2x.png) 2x);  /* Image for Retina */
 		background-position: 100% 43% ;
 		background-repeat:no-repeat;
 		}
@@ -1366,15 +1252,15 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		display:block;
 		position:relative;
 		
-		background : transparent url(../images/next_previous_button.png);
-		background-image: -Webkit-image-set(url(../images/next_previous_button.png) 1x, url(../images/next_previous_button@2x.png) 2x);  /* Image for Retina */
+		background : transparent url(static/images/next_previous_button.png);
+		background-image: -Webkit-image-set(url(static/images/next_previous_button.png) 1x, url(static/images/next_previous_button@2x.png) 2x);  /* Image for Retina */
 		background-position: 100% 0px;
 		background-repeat:no-repeat;
 		}
 	
 	a.next_button.white_arrow{	
-		background : transparent url(../images/next_previous_button_white.png) ;
-		background-image: -Webkit-image-set(url(../images/next_previous_button_white.png) 1x, url(../images/next_previous_button_white@2x.png) 2x);  /* Image for Retina */
+		background : transparent url(static/images/next_previous_button_white.png) ;
+		background-image: -Webkit-image-set(url(static/images/next_previous_button_white.png) 1x, url(static/images/next_previous_button_white@2x.png) 2x);  /* Image for Retina */
 		background-position: 100% 0px;
 		background-repeat:no-repeat;
 		}
@@ -1390,15 +1276,15 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		z-index:1000;
 		display:block;
 		position:relative;
-		background : transparent url(../images/next_previous_button.png);
-		background-image: -Webkit-image-set(url(../images/next_previous_button.png) 1x, url(../images/next_previous_button@2x.png) 2x);  /* Image for Retina */
+		background : transparent url(static/images/next_previous_button.png);
+		background-image: -Webkit-image-set(url(static/images/next_previous_button.png) 1x, url(static/images/next_previous_button@2x.png) 2x);  /* Image for Retina */
 		background-position: 0px 0px;
 		background-repeat:no-repeat;
 		}
 	
 	a.previous_button.white_arrow{	
-		background : transparent url(../images/next_previous_button_white.png);
-		background-image: -Webkit-image-set(url(../images/next_previous_button_white.png) 1x, url(../images/next_previous_button_white@2x.png) 2x);  /* Image for Retina */
+		background : transparent url(static/images/next_previous_button_white.png);
+		background-image: -Webkit-image-set(url(static/images/next_previous_button_white.png) 1x, url(static/images/next_previous_button_white@2x.png) 2x);  /* Image for Retina */
 		background-position: 0px 0px;
 		background-repeat:no-repeat;
 		}
@@ -1417,15 +1303,15 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		position:relative;
 		margin: 0px 0px 0px 10px;
 		
-		background : transparent url(../images/next_previous_button.png);
-		background-image: -Webkit-image-set(url(../images/next_previous_button.png) 1x, url(../images/next_previous_button@2x.png) 2x);  /* Image for Retina */
+		background : transparent url(static/images/next_previous_button.png);
+		background-image: -Webkit-image-set(url(static/images/next_previous_button.png) 1x, url(static/images/next_previous_button@2x.png) 2x);  /* Image for Retina */
 		background-position: 50% 0px;
 		background-repeat:no-repeat;
 		}
 	
 	a.close_button.white_arrow{	
-		background : transparent url(../images/next_previous_button_white.png);
-		background-image: -Webkit-image-set(url(../images/next_previous_button_white.png) 1x, url(../images/next_previous_button_white@2x.png) 2x);  /* Image for Retina */
+		background : transparent url(static/images/next_previous_button_white.png);
+		background-image: -Webkit-image-set(url(static/images/next_previous_button_white.png) 1x, url(static/images/next_previous_button_white@2x.png) 2x);  /* Image for Retina */
 		background-position: 50% 0px;
 		background-repeat:no-repeat;
 		}

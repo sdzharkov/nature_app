@@ -1,18 +1,4 @@
-/**
-	STUDIO POINT - Parallax Responsive Retina Ready
- 	Copyright (c) 2013, Subramanian
-
-	Author: Subramanian
-    Profile: themeforest.net/user/FMedia/
-
-    Version: 1.0.0
-	Release Date: February 2013
-
-**/
-
-/* This file is used only to change the color of the template */
-
-/* To create gradient color use the http://www.colorzilla.com/gradient-editor/ website, It easy to create any type of color with supporting all browser */
+eate any type of color with supporting all browser */
 
 	body { color: #a4afbb; }
 	body, .pageFade { background-color:white
@@ -25,7 +11,7 @@
 	.darkStyle { color: #eeeeee}
 
 
-/* menu color */
+/* menu swag swag*/
 	.header.singlePage{
 		background-color:#111111;
 	 	}
@@ -212,10 +198,6 @@
 	.flipPanel .front {	background-color:#ececec; }
 
 	.darkStyle .flipPanel .front {	background-color:#1a1a1a; }
-
-/* Protfolio page style */
-	.projName{ background-color:#ef3d42; }
-	.projName span{ color:#222; }
 
 
 /* fancybox background color */

@@ -81,8 +81,8 @@ html[xmlns] .slides {display: block;}
 
  }
 .flex-direction-nav li a {width: 52px; height: 52px; margin: -15px 0 0; display: block; position: absolute; top: 45%; cursor: pointer; text-indent: -999em;
-	background: url(../images/slider_bg_direction_nav.png) no-repeat;
-	background-image: -Webkit-image-set(url(../images/slider_bg_direction_nav.png) 1x, url(../images/slider_bg_direction_nav@2x.png) 2x);  /* Image for Retina */
+	background: url(static/images/slider_bg_direction_nav.png) no-repeat;
+	background-image: -Webkit-image-set(url(static/images/slider_bg_direction_nav.png) 1x, url(static/images/slider_bg_direction_nav@2x.png) 2x);  /* Image for Retina */
  }
 .flex-direction-nav li .next {
 		zoom: 1; /* gives the object layout */
@@ -110,8 +110,8 @@ html[xmlns] .slides {display: block;}
 .flex-control-nav li {margin: 0 0 0 2px; display: inline-block; zoom: 1; *display: inline;}
 .flex-control-nav li:first-child {margin: 0;}
 .flex-control-nav li a {width: 23px; height: 16px; display: block; cursor: pointer; text-indent: -999em;
-	background: url(../images/slider_bg_control_nav.png) no-repeat;
-	background-image: -Webkit-image-set(url(../images/slider_bg_control_nav.png) 1x, url(../images/slider_bg_control_nav@2x.png) 2x);  /* Image for Retina */
+	background: url(static/images/slider_bg_control_nav.png) no-repeat;
+	background-image: -Webkit-image-set(url(static/images/slider_bg_control_nav.png) 1x, url(static/images/slider_bg_control_nav@2x.png) 2x);  /* Image for Retina */
 	}
 .flex-control-nav li a:hover {background-position: 0 -16px;}
 .flex-control-nav li a.active {background-position: 0 -31px; cursor: default;}
