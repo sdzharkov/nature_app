@@ -97,11 +97,6 @@ def hello_world():
     return render_template('feature_layer.html')
 
 
-@app.route('/vis')
-def show():
-    return render_template('visualization.html')
-
-@app.route('/ha',methods=['GET'])
 def otto():
     url = 'https://bldg-pi-api.ou.ad3.ucdavis.edu/piwebapi/search/query?q=afelementtemplate:Domestic%20AND%20afelementtemplate:Water%20AND%20afelementtemplate:Gal%20NOT%20afelementtemplate:Manual&fields=name;links&count=100'
     #headers = {'Content-Type': 'application/json'}

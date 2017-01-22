@@ -44,6 +44,14 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     		font-style: normal;
 			}
 
+      .esriScalebar{
+        padding: 20px 20px;
+      }
+      #map{
+      	width: 80%;
+      	height: 80%;
+        padding:10px;
+      }
 
 /* Menu style*/
 	.header .nav li{
@@ -320,16 +328,23 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 	a.button, .button,
 	button {
-		font-family: 'colabreg', Arial, Helvetica, sans-serif;
-		white-space: nowrap;
-	  	display: inline-block;
-	  	font-weight: bold;
-	  	text-decoration: none;
-	  	cursor: pointer;
-	  	margin-bottom: 20px;
-	  	line-height: normal;
-	  	padding: 6px 10px 6px 10px;
-	  	border:none;
+	  background: #ff0000;
+	  background-image: -webkit-linear-gradient(top, #ff0000, #b82b63);
+	  background-image: -moz-linear-gradient(top, #ff0000, #b82b63);
+	  background-image: -ms-linear-gradient(top, #ff0000, #b82b63);
+	  background-image: -o-linear-gradient(top, #ff0000, #b82b63);
+	  background-image: linear-gradient(to bottom, #ff0000, #b82b63);
+	  -webkit-border-radius: 28;
+	  -moz-border-radius: 28;
+	  border-radius: 28px;
+	  font-family: Arial;
+	  color: #ffffff;
+	  font-size: 20px;
+	  padding: 10px 18px 10px 20px;
+	  text-decoration: none;
+	  color:white;
+	  height: 60px;
+	  width: 120px;
 		}
 	a .button { position:relative }
 
@@ -341,7 +356,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 	.button.full-width,
 	button.full-width{
-		width: 100%;
+		width: 100px;
+		height: 100px;
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 		text-align: center; }
