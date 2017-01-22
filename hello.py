@@ -1,12 +1,12 @@
 from flask import Flask, url_for, json
 from flask import render_template
 from flask import request
-from flask_cors import CORS, cross_origin
+# from flask_cors import CORS, cross_origin
 from flask_restful import Resource, Api
 import os
 import requests
 import json
-import asyncio
+# import asyncio
 
 # from me import crossdomain
 app = Flask(__name__)
@@ -80,25 +80,25 @@ def ottoCode():
 
 class locations(Resource):
     def get(self):
-        # dictionary = ottoCode()
+        dictionary = ottoCode()
         SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
         json_url = os.path.join(SITE_ROOT, "static/", "data1.json")
         data = json.load(open(json_url))
         newData = []
         for element in data:
-            if element['assetNumber'] in dictionary.keys():
-               element['val'] = dictionary[element['assetNumber']]
-               newData.append(element)
+           if element['assetNumber'] in dictionary.keys():
+              element['val'] = dictionary[element['assetNumber']]
+              newData.append(element)
 
 
-        print(newData)
+        # print(newData)
         return newData, 200
 
 @app.route('/')
 # @crossdomain(origin='*')
 # @cross_origin()
 def hello_world():
-    return render_template('feature_layer.html')
+    return render_template('feature_layer1.html')
 
 
 @app.route('/vis')

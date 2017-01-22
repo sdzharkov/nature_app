@@ -32,15 +32,13 @@
         "esri/dijit/PopupTemplate",
         "esri/request",
         "esri/geometry/Point",
+        "esri/symbols/SimpleMarkerSymbol",
+        "esri/renderers/ClassBreaksRenderer",
+        "esri/Color",
         "esri/graphic",
         "esri/config",
         "dojo/on",
-        "esri/Color",
-        "esri/renderers/ClassBreaksRenderer",
-        "esri/geometry/Circle",
-        "esri/symbols/SimpleFillSymbol",
         "dojo/_base/array",
-        "esri/symbols/SimpleMarkerSymbol",
         "dojo/domReady!"
       ], function(
         Map,
@@ -48,26 +46,22 @@
         PopupTemplate,
         esriRequest,
         Point,
+        SimpleMarkerSymbol,
+        ClassBreaksRenderer,
+        Color,
         Graphic,
         xx,
         on,
-        ClassBreaksRenderer,
-        Color,
-        Circle,
-        SimpleFillSymbol,
-        array,
-        SimpleMarkerSymbol
+        array
       ) {
         esriConfig.defaults.io.proxyUrl = "/proxy/";
         xx.defaults.io.corsEnabledServers.push('http://127.0.0.1:5000/')
         var featureLayer;
-
         map = new Map("map", {
           basemap: "streets",
           center: [-121.74743, 38.54103],
           zoom: 13
         });
-
         //hide the popup if its outside the map's extent
         map.on("mouse-drag", function(evt) {
           if (map.infoWindow.isShowing) {
@@ -77,7 +71,6 @@
             }
           }
         });
-
         var featureCollection = {
           "layerDefinition": null,
           "featureSet": {
@@ -109,47 +102,83 @@
             "alias": "Description",
             "type": "esriFieldTypeString"
           }, {
-            "name": "title",
-            "alias": "Title",
+            "name": "val",
+            "alias": "val",
             "type": "esriFieldTypeString"
           }]
         };
 
+        var marker5 = new SimpleMarkerSymbol();
+        marker5.setSize(20);
+        marker5.setColor(new Color([255, 0, 0, 0.68]));
+        var marker4 = new SimpleMarkerSymbol();
+        marker4.setSize(20);
+        marker4.setColor(new Color([255, 0, 0, 0.6]));
+        var marker3 = new SimpleMarkerSymbol();
+        marker3.setSize(20);
+        marker3.setColor(new Color([255, 0, 0, 0.43]));
+        var marker2 = new SimpleMarkerSymbol();
+        marker2.setSize(20);
+        marker2.setColor(new Color([255, 0, 0, 0.27]));
+        var marker1 = new SimpleMarkerSymbol();
+        marker1.setSize(20);
+        marker1.setColor(new Color([255, 0, 0, 0.13]));
+        var marker0 = new SimpleMarkerSymbol();
+        marker0.setSize(20);
+        marker0.setColor(new Color([255, 0, 0, 0]));
+        var marker11 = new SimpleMarkerSymbol();
+        marker11.setSize(20);
+        marker11.setColor(new Color([0, 112, 255, 0.14]));
+        var marker22 = new SimpleMarkerSymbol();
+        marker22.setSize(20);
+        marker22.setColor(new Color([0, 112, 255, 0.23]));
+        var marker33 = new SimpleMarkerSymbol();
+        marker33.setSize(20);
+        marker33.setColor(new Color([0, 112, 255, 0.36]));
+        var marker44 = new SimpleMarkerSymbol();
+        marker44.setSize(20);
+        marker44.setColor(new Color([0, 112, 255, 0.51]));
+        var marker55 = new SimpleMarkerSymbol();
+        marker55.setSize(20);
+        marker55.setColor(new Color([0, 112, 255, 0.71]));
 
+        var renderer = new ClassBreaksRenderer(marker0, "val");
+        renderer.addBreak(0, .2, marker1);
+        renderer.addBreak(.2, .3, marker2);
+        renderer.addBreak(.3, .4, marker3);
+        renderer.addBreak(.4, .5, marker4);
+        renderer.addBreak(-1, .5, marker5);
+        renderer.addBreak(1, 1.1, marker11);
+        renderer.addBreak(1.1, 1.2, marker22);
+        renderer.addBreak(1.2, 1.3, marker33);
+        renderer.addBreak(1.3, 1.4, marker44);
+        renderer.addBreak(1.4, 3.0, marker55);
 
+        // renderer.addBreak(75, 175, new SimpleFillSymbol().setColor(new Color([255, 255, 0, 0.5])));
+        // renderer.addBreak(175, 400, new SimpleFillSymbol().setColor(new Color([255, 128, 0, 0.5])));
+        // renderer.addBreak(400, Infinity, new SimpleFillSymbol().setColor(new Color([255, 0, 0, 0.5])));
+        
         //define a popup template
         var popupTemplate = new PopupTemplate({
           title: "{title}",
           description: "{description}"
         });
-
         //create a feature layer based on the feature collection
         featureLayer = new FeatureLayer(featureCollection, {
           id: 'flickrLayer',
           infoTemplate: popupTemplate
         });
+        featureLayer.setRenderer(renderer);
 
         //associate the features with the popup on click
         featureLayer.on("click", function(evt) {
           map.infoWindow.setFeatures([evt.graphic]);
         });
-
         map.on("layers-add-result", function(results) {
           requestPhotos();
         });
         //add the feature layer that contains the flickr photos to the map
-        // map.addLayers([featureLayer]);
-
-        var defaultSymbol = new SimpleMarkerSymbol().setStyle(SimpleMarkerSymbol.STYLE_CIRCLE);  
-        defaultSymbol.setColor(new Color([255, 0, 0, 0.25]));  
-        defaultSymbol.setSize("4.2");  
-          
-        // var renderer = new UniqueValueRenderer(defaultSymbol, "symbolField");  
-        // renderer.addValue("0", new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 6, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0, 0.75]), 1), new Color([255, 0, 0, 0.5])));  
-        // renderer.addValue("1", new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 6, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0, 71, 171, 0.75]), 1), new Color([0, 71, 171, 0.5])));  
-          
-        // featureLayer.setRenderer(renderer);
-
+        map.addLayers([featureLayer]);
       function requestPhotos() {
         //get geotagged photos from flickr
         //tags=flower&tagmode=all
@@ -159,7 +188,6 @@
         });
         requestHandle.then(requestSucceeded, requestFailed);
       }
-
       function requestSucceeded(response, io) {
         //loop through the items and add to the feature layer
         var features = [];
@@ -170,20 +198,16 @@
           ///attr["primaryDisplay"] = item.title ? item.title : "Flickr Photo";
           attr["y"] = item.latitude;
           attr["x"] = item.longitude;
-          attr["val"] = 5;
+          attr["val"] = item.val;
           console.log(attr)
-
-          // var geometry = new Point(attr);
-          var geometry = new Circle([item.latitude, item.longitude], {radius: 300})
+          var geometry = new Point(attr);
 
           var graphic = new Graphic(geometry);
           graphic.setAttributes(attr);
           features.push(graphic);
         });
-
         featureLayer.applyEdits(features, null, null);
       }
-
       function requestFailed(error) {
         console.log('failed');
       }

@@ -32,15 +32,11 @@
         "esri/dijit/PopupTemplate",
         "esri/request",
         "esri/geometry/Point",
+        "esri/geometry/Circle",
         "esri/graphic",
         "esri/config",
         "dojo/on",
-        "esri/Color",
-        "esri/renderers/ClassBreaksRenderer",
-        "esri/geometry/Circle",
-        "esri/symbols/SimpleFillSymbol",
         "dojo/_base/array",
-        "esri/symbols/SimpleMarkerSymbol",
         "dojo/domReady!"
       ], function(
         Map,
@@ -48,26 +44,20 @@
         PopupTemplate,
         esriRequest,
         Point,
+        Circle,
         Graphic,
         xx,
         on,
-        ClassBreaksRenderer,
-        Color,
-        Circle,
-        SimpleFillSymbol,
-        array,
-        SimpleMarkerSymbol
+        array
       ) {
         esriConfig.defaults.io.proxyUrl = "/proxy/";
         xx.defaults.io.corsEnabledServers.push('http://127.0.0.1:5000/')
         var featureLayer;
-
         map = new Map("map", {
           basemap: "streets",
           center: [-121.74743, 38.54103],
           zoom: 13
         });
-
         //hide the popup if its outside the map's extent
         map.on("mouse-drag", function(evt) {
           if (map.infoWindow.isShowing) {
@@ -77,7 +67,6 @@
             }
           }
         });
-
         var featureCollection = {
           "layerDefinition": null,
           "featureSet": {
@@ -114,42 +103,26 @@
             "type": "esriFieldTypeString"
           }]
         };
-
-
-
+        
         //define a popup template
         var popupTemplate = new PopupTemplate({
           title: "{title}",
           description: "{description}"
         });
-
         //create a feature layer based on the feature collection
         featureLayer = new FeatureLayer(featureCollection, {
           id: 'flickrLayer',
           infoTemplate: popupTemplate
         });
-
         //associate the features with the popup on click
         featureLayer.on("click", function(evt) {
           map.infoWindow.setFeatures([evt.graphic]);
         });
-
         map.on("layers-add-result", function(results) {
           requestPhotos();
         });
         //add the feature layer that contains the flickr photos to the map
-        // map.addLayers([featureLayer]);
-
-        var defaultSymbol = new SimpleMarkerSymbol().setStyle(SimpleMarkerSymbol.STYLE_CIRCLE);  
-        defaultSymbol.setColor(new Color([255, 0, 0, 0.25]));  
-        defaultSymbol.setSize("4.2");  
-          
-        // var renderer = new UniqueValueRenderer(defaultSymbol, "symbolField");  
-        // renderer.addValue("0", new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 6, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255, 0, 0, 0.75]), 1), new Color([255, 0, 0, 0.5])));  
-        // renderer.addValue("1", new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 6, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0, 71, 171, 0.75]), 1), new Color([0, 71, 171, 0.5])));  
-          
-        // featureLayer.setRenderer(renderer);
-
+        map.addLayers([featureLayer]);
       function requestPhotos() {
         //get geotagged photos from flickr
         //tags=flower&tagmode=all
@@ -159,7 +132,6 @@
         });
         requestHandle.then(requestSucceeded, requestFailed);
       }
-
       function requestSucceeded(response, io) {
         //loop through the items and add to the feature layer
         var features = [];
@@ -170,20 +142,15 @@
           ///attr["primaryDisplay"] = item.title ? item.title : "Flickr Photo";
           attr["y"] = item.latitude;
           attr["x"] = item.longitude;
-          attr["val"] = 5;
           console.log(attr)
-
-          // var geometry = new Point(attr);
           var geometry = new Circle([item.latitude, item.longitude], {radius: 300})
-
+          // var geometry = new Point(attr);
           var graphic = new Graphic(geometry);
           graphic.setAttributes(attr);
           features.push(graphic);
         });
-
         featureLayer.applyEdits(features, null, null);
       }
-
       function requestFailed(error) {
         console.log('failed');
       }
