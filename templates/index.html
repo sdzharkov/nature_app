@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+
+
+    <html lang="en">
+
+    <head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>UC Davis Water Consumption</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- CSS
+  ================================================== -->
+
+  <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="../static/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../static/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../static/apple-touch-icon-114x114.png">
+
+    <!-- Included CSS files
+	================================================== -->
+  	<link rel="stylesheet" type="text/css"  href="../static/css/main.min.css">
+	<link rel="stylesheet" type="text/css"  href="../static/css/base.min.css">
+    <link rel="stylesheet" type="text/css"  href="../static/css/color.css">
+	<link rel="stylesheet" type="text/css"  href="../static/css/skeleton.min.css">
+	<link rel="stylesheet" type="text/css"  href="../static/css/jquery.fancybox-1.3.4.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css"  href="../static/css/flexslider.min.css" media="screen" />
+    <link rel="stylesheet" href="../static/css/supersized.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../static/css/supersized.shutter.min.css" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="../static/js/jquery-1.7.1.min.js"></script>
+    <!--[if !IE]><!-->
+	<script src="../static/js/ios6-timers.js"></script>
+    <!--<![endif]-->
+	<script type="text/javascript" src="../static/js/custom.min.js"></script>
+    <script type="text/javascript" src="../static/js/supersized.3.2.7.min.js"></script>
+    <script type="text/javascript" src="../static/js/supersized.shutter.min.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.fancybox-1.3.4.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.isotope.min.js" ></script>
+    <script type="text/javascript" src="../static/js/jquery.flexslider.min.js"></script>
+	<script type="text/javascript" src="../static/js/portfolio.detail.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="../static/js/main-fm.min.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.jstwitter.js"></script>
+
+	<script type="text/javascript">
+
+		jQuery(function($){
+
+			$.supersized({
+
+				// Functionality
+				slideshow               :   1,			// Slideshow on/off
+				autoplay				:	1,			// Slideshow starts playing automatically
+				start_slide             :   1,			// Start slide (0 is random)
+				stop_loop				:	0,			// Pauses slideshow on last slide
+				random					: 	0,			// Randomize slide order (Ignores start slide)
+				slide_interval          :   5000,		// Length between transitions
+				transition              :   8, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+				transition_speed		:	1000,		// Speed of transition
+				new_window				:	1,			// Image links open in new window/tab
+				pause_hover             :   0,			// Pause slideshow on hover
+				keyboard_nav            :   1,			// Keyboard navigation on/off
+				performance				:	1,			// 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
+				image_protect			:	1,			// Disables image dragging and right click with Javascript
+
+				// Size & Position
+				min_width		        :   0,			// Min width allowed (in pixels)
+				min_height		        :   0,			// Min height allowed (in pixels)
+				vertical_center         :   1,			// Vertically center background
+				horizontal_center       :   1,			// Horizontally center background
+				fit_always				:	0,			// Image will never exceed browser width or height (Ignores min. dimensions)
+				fit_portrait         	:   0,			// Portrait images will not exceed browser height
+				fit_landscape			:   0,			// Landscape images will not exceed browser width
+
+				// Components
+				slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+				thumb_links				:	1,			// Individual thumb links for each slide
+				thumbnail_navigation    :   0,			// Thumbnail navigation
+				slides 					:  	[			// Slideshow Images, image_small attribute is used to load the mobile version image, main_title attribute is used to add the image tile div
+														{image : '../static/images/home_slider/image1.jpg', image_small : 'images/home_slider/image1_s.jpg', main_title : ".home_slider_title1"},
+														{image : '../static/images/home_slider/image2.jpg', image_small : 'images/home_slider/image2_s.jpg', main_title : ".home_slider_title2"},
+														{image : '../static/images/home_slider/image3.jpg', image_small : 'images/home_slider/image3_s.jpg', main_title : ".home_slider_title3"},
+
+												],
+
+				// Theme Options
+				progress_bar			:	1,			// Timer for each slide
+				mouse_scrub				:	0
+
+				});
+			});
+
+
+	</script>
+
+
+
+
+
+
+    <script>
+
+		/* Site Main plug-in initilize */
+
+		$(document).ready(function(){
+
+
+
+			jQuery(function($){
+				$("body").mainFm({
+
+					/* Set the opening page.
+					leave it blank value if you need to show the home page as a opening page*/
+					currentPage : "!home",
+
+					/* FlexSlider slideshow speed */
+					slideshowSpeed : 5000
+
+				});
+			});
+
+
+
+
+			//.parallax(xPosition, speedFactor, outerHeight) options:
+			//xPosition - Horizontal position of the element
+			//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+			//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+			$('.parallax').each(function(){
+				$(this).parallax("50%", 0.4, true);
+			});
+
+
+
+/* Initialize  - isotope Portfolio */
+
+			$(function(){
+
+			  var $container = $('#gallery_isotope_1');
+			  var $optionSets = $('#options .option-set'),
+				  $optionLinks = $optionSets.find('a');
+
+			  $optionLinks.click(function(){
+				var $this = $(this);
+
+				// don't proceed if already selected
+				if ( $this.hasClass('selected') ) {
+				  return false;
+				}
+				var $optionSet = $this.parents('.option-set');
+				$optionSet.find('.selected').removeClass('selected');
+				$this.addClass('selected');
+
+				// make option object dynamically, i.e. { filter: '.my-filter-class' }
+				   var options = {},
+					  key = $optionSet.attr('data-option-key'),
+					  value = $this.attr('data-option-value');
+				  // parse 'false' as false boolean
+				  value = value === 'false' ? false : value;
+				  options[ key ] = value;
+				  if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+					// changes in layout modes need extra logic
+					changeLayoutMode( $this, options )
+				  } else {
+					// otherwise, apply new options
+					$container.isotope( options );
+				  }
+
+				return false;
+			  });
+
+			});
+
+			// Portfolio isotope gallery initailize
+
+			$('#gallery_isotope_1').isotope({
+				itemSelector : '.item', layoutMode : 'fitRows'
+    		});
+
+
+			// Portfolio isotope gallery categories Filter initialize
+			jQuery(function($){
+				$('.portfolioPage').detailPage({
+					filter : ".filter_options"
+				})
+			});
+
+
+// Email submit action
+			$("#email_submit").click(function() {
+
+				$('#reply_message').removeClass();
+				$('#reply_message').html('')
+				var regEx = "";
+
+				// validate Name
+				var name = $("input#name").val();
+				regEx=/^[A-Za-z .'-]+$/;
+				if (name == "" || name == "Name"  || !regEx.test(name)) {
+					$("input#name").val('');
+					$("input#name").focus();
+					return false;
+				}
+
+				// validate Email
+				var email = $("input#email").val();
+				regEx=/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+				if (email == "" || email == "Email" || !regEx.test(email)) {
+					$("input#email").val('');
+					$("input#email").focus();
+					return false;
+				}
+
+				// validate comment
+				var comments = $("textarea#comments").val();
+				if (comments == "" || comments == "Comments..." || comments.length < 2) {
+					$("textarea#comments").val('');
+					$("textarea#comments").focus();
+					return false;
+				}
+
+				var dataString = 'name='+ $("input#name").val() + '&email=' + $("input#email").val() + '&comments=' + $("textarea#comments").val();
+				$('#reply_message').addClass('email_loading');
+
+				// Send form data to mailer.php
+				$.ajax({
+					type: "POST",
+					url: "mailer.php",
+					data: dataString,
+					success: function() {
+						$('#reply_message').removeClass('email_loading');
+						$('#reply_message').addClass('list3');
+						$('#reply_message').html("Mail sent sucessfully")
+						.hide()
+						.fadeIn(1500);
+							}
+						});
+				return false;
+
+			});
+
+
+		});
+
+
+	</script>
+    <script>var dojoConfig = { parseOnLoad: true };</script>
+    <script src="https://js.arcgis.com/3.19/"></script>
+    <script>
+      var map;
+      require([
+        "esri/map",
+        "esri/layers/FeatureLayer",
+        "esri/dijit/PopupTemplate",
+        "esri/request",
+        "esri/geometry/Point",
+        "esri/symbols/SimpleMarkerSymbol",
+        "esri/renderers/ClassBreaksRenderer",
+        "esri/Color",
+        "esri/graphic",
+        "esri/config",
+        "dojo/on",
+        "dojo/_base/array",
+        "dojo/domReady!"
+      ], function(
+        Map,
+        FeatureLayer,
+        PopupTemplate,
+        esriRequest,
+        Point,
+        SimpleMarkerSymbol,
+        ClassBreaksRenderer,
+        Color,
+        Graphic,
+        xx,
+        on,
+        array
+      ) {
+        esriConfig.defaults.io.proxyUrl = "/proxy/";
+        xx.defaults.io.corsEnabledServers.push('http://127.0.0.1:5000/')
+        var featureLayer;
+        map = new Map("map", {
+          basemap: "streets",
+          center: [-121.74743, 38.54103],
+          zoom: 13
+        });
+        //hide the popup if its outside the map's extent
+        map.on("mouse-drag", function(evt) {
+          if (map.infoWindow.isShowing) {
+            var loc = map.infoWindow.getSelectedFeature().geometry;
+            if (!map.extent.contains(loc)) {
+              map.infoWindow.hide();
+            }
+          }
+        });
+        var featureCollection = {
+          "layerDefinition": null,
+          "featureSet": {
+            "features": [],
+            "geometryType": "esriGeometryPoint"
+          }
+        };
+        featureCollection.layerDefinition = {
+          "geometryType": "esriGeometryPoint",
+          "objectIdField": "ObjectID",
+          "drawingInfo": {
+            "renderer": {
+              "type": "simple",
+              "symbol": {
+                "type": "esriPMS",
+                "url": "static/circle18.png",
+                "contentType": "image/png",
+                "width": 15,
+                "height": 15
+              }
+            }
+          },
+          "fields": [{
+            "name": "ObjectID",
+            "alias": "ObjectID",
+            "type": "esriFieldTypeOID"
+          }, {
+            "name": "description",
+            "alias": "Description",
+            "type": "esriFieldTypeString"
+          }, {
+            "name": "val",
+            "alias": "val",
+            "type": "esriFieldTypeString"
+          }]
+        };
+
+        var marker5 = new SimpleMarkerSymbol();
+        marker5.setSize(20);
+// <<<<<<< Updated upstream
+        marker5.setColor(new Color([255, 0, 0, 0.90]));
+        var marker4 = new SimpleMarkerSymbol();
+        marker4.setSize(20);
+        marker4.setColor(new Color([255, 0, 0, 0.72]));
+        var marker3 = new SimpleMarkerSymbol();
+        marker3.setSize(20);
+        marker3.setColor(new Color([255, 0, 0, 0.54]));
+        var marker2 = new SimpleMarkerSymbol();
+        marker2.setSize(20);
+        marker2.setColor(new Color([255, 0, 0, 0.36]));
+        var marker1 = new SimpleMarkerSymbol();
+        marker1.setSize(20);
+        marker1.setColor(new Color([255, 0, 0, 0.18]));
+// =======
+//         marker5.setColor(new Color([255, 0, 0, 0.68]));
+//         var marker4 = new SimpleMarkerSymbol();
+//         marker4.setSize(20);
+//         marker4.setColor(new Color([255, 0, 0, 0.6]));
+//         var marker3 = new SimpleMarkerSymbol();
+//         marker3.setSize(20);
+//         marker3.setColor(new Color([255, 0, 0, 0.43]));
+//         var marker2 = new SimpleMarkerSymbol();
+//         marker2.setSize(20);
+//         marker2.setColor(new Color([255, 0, 0, 0.27]));
+//         var marker1 = new SimpleMarkerSymbol();
+//         marker1.setSize(20);
+//         marker1.setColor(new Color([255, 0, 0, 0.13]));
+// >>>>>>> Stashed changes
+        var marker0 = new SimpleMarkerSymbol();
+        marker0.setSize(20);
+        marker0.setColor(new Color([255, 0, 0, 0]));
+        var marker11 = new SimpleMarkerSymbol();
+        marker11.setSize(20);
+// <<<<<<< Updated upstream
+        marker11.setColor(new Color([0, 112, 255, 0.18]));
+        var marker22 = new SimpleMarkerSymbol();
+        marker22.setSize(20);
+        marker22.setColor(new Color([0, 112, 255, 0.36]));
+        var marker33 = new SimpleMarkerSymbol();
+        marker33.setSize(20);
+        marker33.setColor(new Color([0, 112, 255, 0.54]));
+        var marker44 = new SimpleMarkerSymbol();
+        marker44.setSize(20);
+        marker44.setColor(new Color([0, 112, 255, 0.72]));
+        var marker55 = new SimpleMarkerSymbol();
+        marker55.setSize(20);
+        marker55.setColor(new Color([0, 112, 255, 0.90]));
+
+        var renderer = new ClassBreaksRenderer(marker0, "val");
+        renderer.addBreak(0, .6, marker55);
+        renderer.addBreak(.6, .79, marker44);
+        renderer.addBreak(.79, .86, marker33);
+        renderer.addBreak(.86, .92, marker22);
+        renderer.addBreak(.92, .97, marker11);
+        renderer.addBreak(.97, 1.03, marker0);
+        renderer.addBreak(1.03, 1.08, marker1);
+        renderer.addBreak(1.08, 1.14, marker2);
+        renderer.addBreak(1.14, 1.21, marker3);
+        renderer.addBreak(1.21, 1.4, marker4);
+        renderer.addBreak(1.4, 9999, marker5);
+// =======
+//         marker11.setColor(new Color([0, 112, 255, 0.14]));
+//         var marker22 = new SimpleMarkerSymbol();
+//         marker22.setSize(20);
+//         marker22.setColor(new Color([0, 112, 255, 0.23]));
+//         var marker33 = new SimpleMarkerSymbol();
+//         marker33.setSize(20);
+//         marker33.setColor(new Color([0, 112, 255, 0.36]));
+//         var marker44 = new SimpleMarkerSymbol();
+//         marker44.setSize(20);
+//         marker44.setColor(new Color([0, 112, 255, 0.51]));
+//         var marker55 = new SimpleMarkerSymbol();
+//         marker55.setSize(20);
+//         marker55.setColor(new Color([0, 112, 255, 0.71]));
+
+//         var renderer = new ClassBreaksRenderer(marker0, "val");
+//         renderer.addBreak(0, .2, marker1);
+//         renderer.addBreak(.2, .3, marker2);
+//         renderer.addBreak(.3, .4, marker3);
+//         renderer.addBreak(.4, .5, marker4);
+//         renderer.addBreak(-1, .5, marker5);
+//         renderer.addBreak(1, 1.1, marker11);
+//         renderer.addBreak(1.1, 1.2, marker22);
+//         renderer.addBreak(1.2, 1.3, marker33);
+//         renderer.addBreak(1.3, 1.4, marker44);
+//         renderer.addBreak(1.4, 3.0, marker55);
+// >>>>>>> Stashed changes
+
+        // renderer.addBreak(75, 175, new SimpleFillSymbol().setColor(new Color([255, 255, 0, 0.5])));
+        // renderer.addBreak(175, 400, new SimpleFillSymbol().setColor(new Color([255, 128, 0, 0.5])));
+        // renderer.addBreak(400, Infinity, new SimpleFillSymbol().setColor(new Color([255, 0, 0, 0.5])));
+        
+        //define a popup template
+        var popupTemplate = new PopupTemplate({
+          title: "{name}",
+          description: "{val}"
+        });
+        //create a feature layer based on the feature collection
+        featureLayer = new FeatureLayer(featureCollection, {
+          id: 'flickrLayer',
+          infoTemplate: popupTemplate
+        });
+        featureLayer.setRenderer(renderer);
+
+        //associate the features with the popup on click
+        featureLayer.on("click", function(evt) {
+          map.infoWindow.setFeatures([evt.graphic]);
+        });
+        map.on("layers-add-result", function(results) {
+          requestPhotos();
+        });
+        //add the feature layer that contains the flickr photos to the map
+        map.addLayers([featureLayer]);
+      function requestPhotos() {
+        //get geotagged photos from flickr
+        //tags=flower&tagmode=all
+        var requestHandle = esriRequest({
+          url: "http://127.0.0.1:5000/locations",
+          handleAs: "json"
+        });
+        requestHandle.then(requestSucceeded, requestFailed);
+      }
+      function requestSucceeded(response, io) {
+        //loop through the items and add to the feature layer
+        var features = [];
+        console.log(response)
+        array.forEach(response, function(item) {
+          console.log(item)
+          var attr = {};
+          ///attr["primaryDisplay"] = item.title ? item.title : "Flickr Photo";
+          attr["y"] = item.latitude;
+          attr["x"] = item.longitude;
+          attr["val"] = item.val;
+          attr["name"] = item.primaryDisplay;
+          console.log(attr)
+          var geometry = new Point(attr);
+
+          var graphic = new Graphic(geometry);
+          graphic.setAttributes(attr);
+          features.push(graphic);
+        });
+        featureLayer.applyEdits(features, null, null);
+      }
+      function requestFailed(error) {
+        console.log('failed');
+      }
+    });
+    </script>
+
+
+
+</head>
+<body >
+
+
+
+<div class="pageFade" > </div>
+
+<!--
+Site main frame begin
+Note: Don't edit main frame, except comment area
+-->
+
+
+ <!-- Supersized home page slider show Arrow Navigation-->
+<div id="superNav">
+	<a id="prevslide" class="load-item padBottom" ></a>
+	<a id="nextslide" class="load-item padBottom" ></a>
+<!--  	<a id="play-button" class="padBottom" ><img id="pauseplay" src="../static/images/supersized/pause.png" /></a> -->
+</div>
+
+
+<div class="contentWrapper homeSlider white_nav" data-id="!home" >
+	<div class="homepage_con">
+
+		<div class="badandboujee"></div>
+
+        <!-- 1 -->
+		<div class="home_slider_title1" >
+			<div class="textAlignCenter">
+    			<h1><span class="textBackground">The Water Report</span></h1>
+     	   		<h2><span class="light_color">UC Davis</span></h2>
+			</div>
+		</div>
+
+
+         <!--  2 -->
+         <div class="home_slider_title2"  >
+            <h1><span class="light_color">In the past few years</span></h1>
+            <h2><span class="light_color">UC Davis has made serious moves to lower our campus water consumption... </span></h2>
+        </div>
+
+
+         <!-- 3 -->
+		<div class="home_slider_title3 blockquote_large"  >
+			<div class=" light_color"  >
+					<h2><span class="textBackground_white">Want to see?</span></h2>
+					<p >Scroll down to check out our live-updating campus maps</p>
+
+			</div>
+		</div>
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+<div class="header stayBottom" >
+
+	<div class="container" style="width:100%" >
+
+<!--         <div class="logo " >
+			<a href="#!home"><img src="../static/images/logo.png" data-src-small="../static/images/logo_s.png" data-retina="yes" alt="  text"></a>
+        </div> -->
+
+		<div class="nav" >
+			<ul id="navHolder" >
+
+
+		</div>
+
+	</div>
+</div>
+
+
+
+<!-- About us  page -->
+
+<div class="contentWrapper"  data-id="!aboutus" >
+
+	<div class="fullWidth titleTop lightStyle">
+		<div class="container" >
+            <div class="sixteen columns">
+                <span class="title_text" >The average building on campus uses about THIS MUCH water a week</span>
+            </div>
+        </div>
+  	</div>
+
+    <div class="fullWidth" >
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Client  -->
+
+<div class="contentWrapper  fullWidth titleTop lightStyle">
+	<div class="container" >
+		<div class="sixteen columns">
+			<div class="mobile_spacing">
+				<span class="title_text" >The average UC Davis student uses anywhere from 59-72 gallons of water a day.</span>
+			</div>
+		</div>
+	</div>
+	<div>
+   	
+ 
+</div>
+
+
+
+<!-- Parallax content data-src attribute is used to set the larg size image for desktop and
+	 data-src-small is used to set the small size image for mobile device -->
+
+<div class="contentWrapper parallax" data-src="../static/images/background/image1.jpg" data-src-small="../static/images/background/image1_s.jpg" >
+	<div class="parallaxPattern"></div>
+	<div class="container" >
+		<div class="table_left" >
+			<hr>
+			<a class="imgBtn">	<img src="">	</a>f
+			<a class="imgBtn">	<img src="">	</a>
+			<a class="imgBtn">	<img src="">	</a>
+			<a class="imgBtn">	<img src="">	</a>
+			<hr>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- <div id="map"></div>
+ -->
+
+
+
+
+<!-- Services Page -->
+
+<div class="contentWrapper titleTopLarge darkStyle" data-id="!services" >
+	<div class="container" >
+		<div class="sixteen columns">
+			<div class="mobile_spacing">
+				<span class="title_text" >How has our university changed recently to accost saving water?</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="contentWrapper lightStyle" >
+	<div class="container" >
+
+		<div class="row">
+            <div class="sixteen columns">
+                <hr>
+                <div class="separator_mini"></div>
+                <h5>Glad you asked!  Here are 3 ways UC Davis has been trying to lower our total campus water use:
+                </h5>
+                <div class="fuckBox">
+	                <h2> Or check out our Map!</h2>
+	                <h3> PS: It takes about 30 seconds to load!</h3>
+	                <h4> The map compares UC Davis building's usage for a week and reports the difference in usage.</h4> 
+	                <a href="http://127.0.0.1:5000/map">
+	                	 <button href="" class="btnn" id='me'>MAP</button>
+	                </a>
+	               
+                <div>
+            </div>
+            
+
+        </div>
+
+		<hr>
+
+        <div class="row">
+            <div class="nine columns" id="ninebox">
+                <!-- Tab Navigation Begin -->
+                <ul class="tabs">
+                    <li><a href="#staff" class="active" >1</a></li>
+                    <li><a href="#video">2</a></li>
+                    <li><a href="#strategy">3</a></li>
+                </ul>
+
+                <!-- Tab Content -->
+                <ul class="tabs-content">
+
+                    <li id="staff"  class="active">
+                        <div class="row alpha ">
+
+                            <h5 class="title title_bottomspace">Watering bags around trees</h5>
+                        To help alleviate this pressure and maintain tree health we have installed over two hundred slow-release watering bags on young trees throughout campus. Each one of these bags is filled manually from our campus water truck about once a week with approximately 10-15 gallons of water which then seeps slowly from small holes in the botton of the bag into the surrounding soil. This action not only targets young tree roots, it also reduces water run-off and evaporation. Each one of these bags saves about 1000 gallons of water a year per tree.
+                        </div>
+
+
+                     </li>
+
+                     <li id="video"  class="active">
+                         <div class="row alpha ">
+
+                             <h5 class="title title_bottomspace">Irrigation improvements</h5>
+                             The utilities division completed the cooling system project in two weeks for the cost of labor plus $20,000 in materials. The savings result from using recycled water instead of well water to help cool the campus’s “chilled water” supply; it loops around the campus, delivering chill to air handling systems, then returns to the cooling plant to be rechilled.
+                         </div>
+
+
+                      </li>
+
+
+                      <li id="strategy"  class="active">
+                          <div class="row alpha ">
+
+                              <h5 class="title title_bottomspace">Converting lawns to other plants</h5>
+                              While most of our main campus landscape irrigation is part of a high-efficiency computerized system, there are still some areas, mostly in the central part of the Arboretum, that require hand watering during the day with hoses and/or spray irrigation. Not only is this method labor intensive—it requires staff who can start, stop, and move it—it’s also inefficient because it often results in overspray and wet guests!
+                          </div>
+
+
+                       </li>
+
+                        </div>
+                        <hr>
+                     </li>
+
+                </ul>
+                <!-- End Tab Example -->
+
+            </div>
+
+            <div class="six columns offset-by-one" >
+                <h3>This much water is used for this resource</h3>
+                <div class="separator_mini"></div>
+                <div class="graph_container">
+                    <ul>
+                        <li data-level="80%" ><a></a> <span>ON campus agriculture </span></li>
+                        <li data-level="70%"><a></a> <span>Dorm showers</span></li>
+                        <li data-level="90%"><a></a> <span>Watering people</span></li>
+                        <li data-level="50%" class="last"><a></a> <span>Water fountains</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+		<hr>
+
+		<div class="row" >
+			<div class="sixteen columns">
+				<h2> This is how we can fix things </h2>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<a class="circleHolder alignCenter single_image" data-title='<h5 class="light_color">Mini description about project</h5>'  href="../static/images/portfolio/image5.jpg" target="_self" >
+				<div class="flipPanel smallCircle" >
+					<div class="circle front service_icon1" ></div>
+					<div class="circle back">
+						<span class="padTopLarge">
+							<h5 class="light_color">click to see</h5>
+							<h5 class="light_color"><strong>something</strong></h5>
+						</span>
+					</div>
+				</div>
+
+				<span class="description">
+					<h4>Save the world</h4>
+					<p class="dark_color">Yep do it </p>
+				</span>
+			</a>
+
+
+			<a class="circleHolder alignCenter single_image" data-title='<h5 class="light_color">Load YouTube and Vimeo video</h5>'  href="http://www.youtube.com" target="_self" >
+				<div class="flipPanel smallCircle" >
+					<div class="circle front service_icon2"></div>
+					<div class="circle back">
+						<span class="padTopLarge">
+							<h5 class="light_color">click to see</h5>
+							<h5 class="light_color"><strong>something</strong></h5>
+						</span>
+					</div>
+				</div>
+
+                <span class="description">
+                    <h4>Learn about water shed</h4>
+                    <p class="dark_color">osisoft made it or something</p>
+            	</span>
+			</a>
+
+
+			<a class="circleHolder alignCenter single_image" data-title='<span class="light_color">Mini description about project, eorem ipsum dolor sit amet, consectetur adipisicing elit</span>'  href="../static/images/portfolio/image6.jpg" target="_self" >
+				<div class="flipPanel smallCircle" >
+					<div class="circle front service_icon3" ></div>
+					<div class="circle back">
+						<span class="padTopLarge">
+							<h5 class="light_color">click to see</h5>
+							<h5 class="light_color"><strong>something</strong></h5>
+						</span>
+					</div>
+				</div>
+
+                <span class="description">
+                    <h4>download this app</h4>
+                    <p class="dark_color">to log your water drinking like a plant </p>
+            	</span>
+			</a>
+
+
+			<a class="circleHolder alignCenter single_image" data-title='<h5 class="light_color">Mini description about project</h5>'  href="../static/images/portfolio/image7.jpg" target="_self" >
+				<div class="flipPanel smallCircle" >
+					<div class="circle front service_icon4" ></div>
+					<div class="circle back">
+						<span class="padTopLarge">
+							<h5 class="light_color">click to see</h5>
+							<h5 class="light_color"><strong>something</strong></h5>
+						</span>
+					</div>
+				</div>
+
+                <span class="description">
+                	<h4>think green</h4>
+                    <p class="dark_color">liek a cucumber </p>
+                </span>
+			</a>
+
+
+            <a class="circleHolder alignCenter single_image"  data-title='<h5 class="light_color">Load YouTube and Vimeo video</h5>'  href="http://player.vimeo.com/video/45778774?portrait=0&color=ef3d42" target="_self" >
+				<div class="flipPanel smallCircle" >
+					<div class="circle front service_icon5" ></div>
+					<div class="circle back">
+						<span class="padTopLarge">
+							<h5 class="light_color">click to see</h5>
+							<h5 class="light_color"><strong>something</strong></h5>
+						</span>
+					</div>
+				</div>
+
+                <span class="description">
+                    <h4>watch a <br> movie</h4>
+                    <p class="dark_color">about global warming</p>
+            	</span>
+			</a>
+
+
+		</div>
+        <!-- Page scroll down to Next page -->
+        <a class=" move_down" href="#!portfolio"><span></span></a>
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Twitter section -->
+<!-- Parallax content data-src attribute is used to set the larg size image for desktop and
+	 data-src-small is used to set the small size image for mobile device -->
+
+<div class="contentWrapper parallax" data-src="../static/images/background/image2.jpg" data-src-small="../static/images/background/image2_s.jpg" >
+	<div class="parallaxPattern"></div>
+        <div class="container darkStyle bg_transparent" >
+            <div class="table_left" >
+    			<hr>
+                <h2 class="textAlignCenter">Thank you!</h2>
+                <div class="separator_mini"></div>
+                <!-- Twitter Slider -->
+                <div class="flexSlideshow_twitter slideAnimation" >
+                    <ul id="jstwitter" class="slides">  </ul>
+                </div>
+            	<hr>
+    	</div>
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Contactx -->
+
+<div class="contentWrapper contactPage" data-id="!contactus" >
+
+	<div class="fullWidth titleTop lightStyle" >
+        <div class="container" >
+			<div class="sixteen columns">
+				<span class="title_text dark_color" ></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="fullWidth parallax removePadding" data-src="../static/images/background/image4.jpg" data-src-small="../static/images/background/image4_s.jpg" >
+    <div class="overlayPattern" ></div>
+		<div class="container contactUsPg" >
+			<hr><hr>
+			<div class="one columns alpha" >
+				<div class="separator_mini"></div>
+			</div>
+
+
+		<div class="footer_fit"> </div>
+
+		<div class="footer" >
+
+
+	</div>
+
+</div>
+
+
+</body>
+
+</html>
