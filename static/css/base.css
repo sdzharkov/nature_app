@@ -12,22 +12,22 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		
 		@font-face{
 			font-family:"colabreg";     
-			src:url('../fonts/colabreg-webfont.eot');     
-			src:url('../fonts/colabreg-webfont.eot?#iefix') format('embedded-opentype'),         
-				url('../fonts/colabreg-webfont.woff') format('woff'),         
-				url('../fonts/colabreg-webfont.ttf') format('truetype'),         
-				url('../fonts/colabreg-webfont.svg#ColabReg') format('svg');
+			src:url('static/fonts/colabreg-webfont.eot');     
+			src:url('static/fonts/colabreg-webfont.eot?#iefix') format('embedded-opentype'),         
+				url('static/fonts/colabreg-webfont.woff') format('woff'),         
+				url('static/fonts/colabreg-webfont.ttf') format('truetype'),         
+				url('static/fonts/colabreg-webfont.svg#ColabReg') format('svg');
 			font-weight: normal;
     		font-style: normal;
 			}
 
 		@font-face{
 			font-family:'OswaldRegular';     
-			src:url('../fonts/oswald-webfont.eot');     
-			src:url('../fonts/oswald-webfont.eot?#iefix') format('embedded-opentype'),         
-				url('../fonts/oswald-webfont.woff') format('woff'),         
-				url('../fonts/oswald-webfont.ttf') format('truetype'),         
-				url('../fonts/oswald-webfont.svg#OswaldRegular') format('svg');  
+			src:url('static/fonts/oswald-webfont.eot');     
+			src:url('static/fonts/oswald-webfont.eot?#iefix') format('embedded-opentype'),         
+				url('static/fonts/oswald-webfont.woff') format('woff'),         
+				url('static/fonts/oswald-webfont.ttf') format('truetype'),         
+				url('static/fonts/oswald-webfont.svg#OswaldRegular') format('svg');  
 			font-weight: normal;
     		font-style: normal;
 			}
@@ -35,11 +35,11 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 		
 		@font-face {
 			font-family: 'bebas_neueregular';
-			src: url('../fonts/bebasneue-webfont.eot');
-			src: url('../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
-				 url('../fonts/bebasneue-webfont.woff') format('woff'),
-				 url('../fonts/bebasneue-webfont.ttf') format('truetype'),
-				 url('../fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+			src: url('static/fonts/bebasneue-webfont.eot');
+			src: url('static/fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+				 url('static/fonts/bebasneue-webfont.woff') format('woff'),
+				 url('static/fonts/bebasneue-webfont.ttf') format('truetype'),
+				 url('static/fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
 			font-weight: normal;
     		font-style: normal;
 			}
