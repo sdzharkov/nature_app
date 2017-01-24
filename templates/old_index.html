@@ -23,39 +23,39 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-
+	{% load static %}
 	<!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon" href="../static/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="../static/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="../static/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'apple-touch-icon-114x114.png">
 
     <!-- Included CSS files
 	================================================== -->
-  	<link rel="stylesheet" type="text/css"  href="../static/css/main.min.css">
-	<link rel="stylesheet" type="text/css"  href="../static/css/base.min.css">
-    <link rel="stylesheet" type="text/css"  href="../static/css/color.css">
-	<link rel="stylesheet" type="text/css"  href="../static/css/skeleton.min.css">
-	<link rel="stylesheet" type="text/css"  href="../static/css/jquery.fancybox-1.3.4.min.css" media="screen" />
-    <link rel="stylesheet" type="text/css"  href="../static/css/flexslider.min.css" media="screen" />
-    <link rel="stylesheet" href="../static/css/supersized.min.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="../static/css/supersized.shutter.min.css" type="text/css" media="screen" />
+  	<link rel="stylesheet" type="text/css"  href="{% static 'css/main.min.css' %}"
+	<link rel="stylesheet" type="text/css"  href="{% static 'css/base.min.css' %}"
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/color.css' %}"
+	<link rel="stylesheet" type="text/css"  href="{% static 'css/skeleton.min.css' %}"
+	<link rel="stylesheet" type="text/css"  href="{% static 'css/jquery.fancybox-1.3.4.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/flexslider.min.css" media="screen" />
+    <link rel="stylesheet" href="{% static 'css/supersized.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{% static 'css/supersized.shutter.min.css" type="text/css" media="screen" />
 
-    <script type="text/javascript" src="../static/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery-1.7.1.min.js' %}"</script>
     <!--[if !IE]><!-->
-	<script src="../static/js/ios6-timers.js"></script>
+	<script src="../static/js/ios6-timers.js' %}"</script>
     <!--<![endif]-->
-	<script type="text/javascript" src="../static/js/custom.min.js"></script>
-    <script type="text/javascript" src="../static/js/supersized.3.2.7.min.js"></script>
-    <script type="text/javascript" src="../static/js/supersized.shutter.min.js"></script>
-	<script type="text/javascript" src="../static/js/jquery.fancybox-1.3.4.min.js"></script>
+	<script type="text/javascript" src="../static/js/custom.min.js' %}"</script>
+    <script type="text/javascript" src="../static/js/supersized.3.2.7.min.js' %}"</script>
+    <script type="text/javascript" src="../static/js/supersized.shutter.min.js' %}"</script>
+	<script type="text/javascript" src="../static/js/jquery.fancybox-1.3.4.min.js' %}"</script>
     <script type="text/javascript" src="../static/js/jquery.isotope.min.js" ></script>
-    <script type="text/javascript" src="../static/js/jquery.flexslider.min.js"></script>
-	<script type="text/javascript" src="../static/js/portfolio.detail.min.js"></script>
-    <script type="text/javascript" src="../static/js/jquery.nicescroll.min.js"></script>
-    <script type="text/javascript" src="../static/js/main-fm.min.js"></script>
-	<script type="text/javascript" src="../static/js/jquery.jstwitter.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.flexslider.min.js' %}"</script>
+	<script type="text/javascript" src="../static/js/portfolio.detail.min.js' %}"</script>
+    <script type="text/javascript" src="../static/js/jquery.nicescroll.min.js' %}"</script>
+    <script type="text/javascript" src="../static/js/main-fm.min.js' %}"</script>
+	<script type="text/javascript" src="../static/js/jquery.jstwitter.js' %}"</script>
 
 	<script type="text/javascript">
 
@@ -259,6 +259,246 @@
 
 
 	</script>
+    <script>var dojoConfig = { parseOnLoad: true };</script>
+    <script src="https://js.arcgis.com/3.19/"></script>
+    <script>
+      var map;
+      require([
+        "esri/map",
+        "esri/layers/FeatureLayer",
+        "esri/dijit/PopupTemplate",
+        "esri/request",
+        "esri/geometry/Point",
+        "esri/symbols/SimpleMarkerSymbol",
+        "esri/renderers/ClassBreaksRenderer",
+        "esri/Color",
+        "esri/graphic",
+        "esri/config",
+        "dojo/on",
+        "dojo/_base/array",
+        "dojo/domReady!"
+      ], function(
+        Map,
+        FeatureLayer,
+        PopupTemplate,
+        esriRequest,
+        Point,
+        SimpleMarkerSymbol,
+        ClassBreaksRenderer,
+        Color,
+        Graphic,
+        xx,
+        on,
+        array
+      ) {
+        esriConfig.defaults.io.proxyUrl = "/proxy/";
+        xx.defaults.io.corsEnabledServers.push('http://127.0.0.1:5000/')
+        var featureLayer;
+        map = new Map("map", {
+          basemap: "streets",
+          center: [-121.74743, 38.54103],
+          zoom: 13
+        });
+        //hide the popup if its outside the map's extent
+        map.on("mouse-drag", function(evt) {
+          if (map.infoWindow.isShowing) {
+            var loc = map.infoWindow.getSelectedFeature().geometry;
+            if (!map.extent.contains(loc)) {
+              map.infoWindow.hide();
+            }
+          }
+        });
+        var featureCollection = {
+          "layerDefinition": null,
+          "featureSet": {
+            "features": [],
+            "geometryType": "esriGeometryPoint"
+          }
+        };
+        featureCollection.layerDefinition = {
+          "geometryType": "esriGeometryPoint",
+          "objectIdField": "ObjectID",
+          "drawingInfo": {
+            "renderer": {
+              "type": "simple",
+              "symbol": {
+                "type": "esriPMS",
+                "url": "static/circle18.png",
+                "contentType": "image/png",
+                "width": 15,
+                "height": 15
+              }
+            }
+          },
+          "fields": [{
+            "name": "ObjectID",
+            "alias": "ObjectID",
+            "type": "esriFieldTypeOID"
+          }, {
+            "name": "description",
+            "alias": "Description",
+            "type": "esriFieldTypeString"
+          }, {
+            "name": "val",
+            "alias": "val",
+            "type": "esriFieldTypeString"
+          }]
+        };
+
+        var marker5 = new SimpleMarkerSymbol();
+        marker5.setSize(20);
+// <<<<<<< Updated upstream
+        marker5.setColor(new Color([255, 0, 0, 0.90]));
+        var marker4 = new SimpleMarkerSymbol();
+        marker4.setSize(20);
+        marker4.setColor(new Color([255, 0, 0, 0.72]));
+        var marker3 = new SimpleMarkerSymbol();
+        marker3.setSize(20);
+        marker3.setColor(new Color([255, 0, 0, 0.54]));
+        var marker2 = new SimpleMarkerSymbol();
+        marker2.setSize(20);
+        marker2.setColor(new Color([255, 0, 0, 0.36]));
+        var marker1 = new SimpleMarkerSymbol();
+        marker1.setSize(20);
+        marker1.setColor(new Color([255, 0, 0, 0.18]));
+// =======
+//         marker5.setColor(new Color([255, 0, 0, 0.68]));
+//         var marker4 = new SimpleMarkerSymbol();
+//         marker4.setSize(20);
+//         marker4.setColor(new Color([255, 0, 0, 0.6]));
+//         var marker3 = new SimpleMarkerSymbol();
+//         marker3.setSize(20);
+//         marker3.setColor(new Color([255, 0, 0, 0.43]));
+//         var marker2 = new SimpleMarkerSymbol();
+//         marker2.setSize(20);
+//         marker2.setColor(new Color([255, 0, 0, 0.27]));
+//         var marker1 = new SimpleMarkerSymbol();
+//         marker1.setSize(20);
+//         marker1.setColor(new Color([255, 0, 0, 0.13]));
+// >>>>>>> Stashed changes
+        var marker0 = new SimpleMarkerSymbol();
+        marker0.setSize(20);
+        marker0.setColor(new Color([255, 0, 0, 0]));
+        var marker11 = new SimpleMarkerSymbol();
+        marker11.setSize(20);
+// <<<<<<< Updated upstream
+        marker11.setColor(new Color([0, 112, 255, 0.18]));
+        var marker22 = new SimpleMarkerSymbol();
+        marker22.setSize(20);
+        marker22.setColor(new Color([0, 112, 255, 0.36]));
+        var marker33 = new SimpleMarkerSymbol();
+        marker33.setSize(20);
+        marker33.setColor(new Color([0, 112, 255, 0.54]));
+        var marker44 = new SimpleMarkerSymbol();
+        marker44.setSize(20);
+        marker44.setColor(new Color([0, 112, 255, 0.72]));
+        var marker55 = new SimpleMarkerSymbol();
+        marker55.setSize(20);
+        marker55.setColor(new Color([0, 112, 255, 0.90]));
+
+        var renderer = new ClassBreaksRenderer(marker0, "val");
+        renderer.addBreak(0, .6, marker55);
+        renderer.addBreak(.6, .79, marker44);
+        renderer.addBreak(.79, .86, marker33);
+        renderer.addBreak(.86, .92, marker22);
+        renderer.addBreak(.92, .97, marker11);
+        renderer.addBreak(.97, 1.03, marker0);
+        renderer.addBreak(1.03, 1.08, marker1);
+        renderer.addBreak(1.08, 1.14, marker2);
+        renderer.addBreak(1.14, 1.21, marker3);
+        renderer.addBreak(1.21, 1.4, marker4);
+        renderer.addBreak(1.4, 9999, marker5);
+// =======
+//         marker11.setColor(new Color([0, 112, 255, 0.14]));
+//         var marker22 = new SimpleMarkerSymbol();
+//         marker22.setSize(20);
+//         marker22.setColor(new Color([0, 112, 255, 0.23]));
+//         var marker33 = new SimpleMarkerSymbol();
+//         marker33.setSize(20);
+//         marker33.setColor(new Color([0, 112, 255, 0.36]));
+//         var marker44 = new SimpleMarkerSymbol();
+//         marker44.setSize(20);
+//         marker44.setColor(new Color([0, 112, 255, 0.51]));
+//         var marker55 = new SimpleMarkerSymbol();
+//         marker55.setSize(20);
+//         marker55.setColor(new Color([0, 112, 255, 0.71]));
+
+//         var renderer = new ClassBreaksRenderer(marker0, "val");
+//         renderer.addBreak(0, .2, marker1);
+//         renderer.addBreak(.2, .3, marker2);
+//         renderer.addBreak(.3, .4, marker3);
+//         renderer.addBreak(.4, .5, marker4);
+//         renderer.addBreak(-1, .5, marker5);
+//         renderer.addBreak(1, 1.1, marker11);
+//         renderer.addBreak(1.1, 1.2, marker22);
+//         renderer.addBreak(1.2, 1.3, marker33);
+//         renderer.addBreak(1.3, 1.4, marker44);
+//         renderer.addBreak(1.4, 3.0, marker55);
+// >>>>>>> Stashed changes
+
+        // renderer.addBreak(75, 175, new SimpleFillSymbol().setColor(new Color([255, 255, 0, 0.5])));
+        // renderer.addBreak(175, 400, new SimpleFillSymbol().setColor(new Color([255, 128, 0, 0.5])));
+        // renderer.addBreak(400, Infinity, new SimpleFillSymbol().setColor(new Color([255, 0, 0, 0.5])));
+        
+        //define a popup template
+        var popupTemplate = new PopupTemplate({
+          title: "{name}",
+          description: "{val}"
+        });
+        //create a feature layer based on the feature collection
+        featureLayer = new FeatureLayer(featureCollection, {
+          id: 'flickrLayer',
+          infoTemplate: popupTemplate
+        });
+        featureLayer.setRenderer(renderer);
+
+        //associate the features with the popup on click
+        featureLayer.on("click", function(evt) {
+          map.infoWindow.setFeatures([evt.graphic]);
+        });
+        map.on("layers-add-result", function(results) {
+          requestPhotos();
+        });
+        //add the feature layer that contains the flickr photos to the map
+        map.addLayers([featureLayer]);
+      function requestPhotos() {
+        //get geotagged photos from flickr
+        //tags=flower&tagmode=all
+        var requestHandle = esriRequest({
+          url: "http://127.0.0.1:5000/locations",
+          handleAs: "json"
+        });
+        requestHandle.then(requestSucceeded, requestFailed);
+      }
+      function requestSucceeded(response, io) {
+        //loop through the items and add to the feature layer
+        var features = [];
+        console.log(response)
+        array.forEach(response, function(item) {
+          console.log(item)
+          var attr = {};
+          ///attr["primaryDisplay"] = item.title ? item.title : "Flickr Photo";
+          attr["y"] = item.latitude;
+          attr["x"] = item.longitude;
+          attr["val"] = item.val;
+          attr["name"] = item.primaryDisplay;
+          console.log(attr)
+          var geometry = new Point(attr);
+
+          var graphic = new Graphic(geometry);
+          graphic.setAttributes(attr);
+          features.push(graphic);
+        });
+        featureLayer.applyEdits(features, null, null);
+      }
+      function requestFailed(error) {
+        console.log('failed');
+      }
+    });
+    </script>
+
+
+
 </head>
 <body >
 
@@ -519,7 +759,7 @@ Note: Don't edit main frame, except comment area
 
 
 		<div class="row">
-			<a class="circleHolder alignCenter single_image" data-title='<h5 class="light_color">Mini description about project</h5>'  href="../static/images/portfolio/image5.jpg" target="_self" >
+			<a class="circleHolder alignCenter single_image" data-title='<h5 class="light_color">Mini description about project</h5>'  href="{% static 'images/portfolio/image5.jpg' %}" target="_self" >
 				<div class="flipPanel smallCircle" >
 					<div class="circle front service_icon1" ></div>
 					<div class="circle back">
@@ -555,7 +795,7 @@ Note: Don't edit main frame, except comment area
 			</a>
 
 
-			<a class="circleHolder alignCenter single_image" data-title='<span class="light_color">Mini description about project, eorem ipsum dolor sit amet, consectetur adipisicing elit</span>'  href="../static/images/portfolio/image6.jpg" target="_self" >
+			<a class="circleHolder alignCenter single_image" data-title='<span class="light_color">Mini description about project, eorem ipsum dolor sit amet, consectetur adipisicing elit</span>'  href="{% static 'images/portfolio/image6.jpg' %}" target="_self" >
 				<div class="flipPanel smallCircle" >
 					<div class="circle front service_icon3" ></div>
 					<div class="circle back">
@@ -573,7 +813,7 @@ Note: Don't edit main frame, except comment area
 			</a>
 
 
-			<a class="circleHolder alignCenter single_image" data-title='<h5 class="light_color">Mini description about project</h5>'  href="../static/images/portfolio/image7.jpg" target="_self" >
+			<a class="circleHolder alignCenter single_image" data-title='<h5 class="light_color">Mini description about project</h5>'  href="{% static 'images/portfolio/image7.jpg' %}" target="_self" >
 				<div class="flipPanel smallCircle" >
 					<div class="circle front service_icon4" ></div>
 					<div class="circle back">
