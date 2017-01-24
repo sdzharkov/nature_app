@@ -132,13 +132,13 @@ body{
 					position:fixed; 
 					z-index:1000000;
 					overflow:hidden;
-					background: url(../images/loading.gif) no-repeat center center;
-					background-image: -Webkit-image-set(url(../images/loading.gif) 1x, url(../images/loading@2x.gif) 2x);  /* Image for Retina */
+					background: url('../images/loading.gif') no-repeat center center;
+					background-image: -Webkit-image-set(url('static/images/loading.gif') 1x, url('static/images/loading@2x.gif') '2x);  /* Image for Retina */
 				 } 
 				 
 				 .pageFade.bg_white { 
-					background: url(../images/loading_white.gif) no-repeat center center;
-					background-image: -Webkit-image-set(url(../images/loading_white.gif) 1x, url(../images/loading_white@2x.gif) 2x);  /* Image for Retina */
+					background: url('../images/loading_white.gif') no-repeat center center;
+					background-image: -Webkit-image-set(url('static/images/loading_white.gif') 1x, url('static/images/loading_white@2x.gif') 2x);  /* Image for Retina */
 					} 
 
 				
